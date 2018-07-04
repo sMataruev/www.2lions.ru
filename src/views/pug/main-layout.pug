@@ -15,17 +15,15 @@ html(lang='ru')
 		meta(name="msapplication-navbutton-color" content="#000")
 		meta(name="apple-mobile-web-app-status-bar-style" content="#000")
 		// подключение сss
-		link(rel="stylesheet", type="text/css"  href="../css/bootstrap-grid.css")
-		link(rel="stylesheet", type="text/css"  href="../css/bootstrap.css")
+		link(rel="stylesheet", type="text/css"  href="../css/normalize.css")
 		link(rel="stylesheet", type="text/css"  href="../css/styles.css")
 		title
 			block title
 
 	body
-		.container
+		.wrapper
 			block content
 
 		script(src='../js/jquery.min.js')
 		script(src='../js/jquery.waypoints.js')
-		script(src='../js/bootstrap.js')
 		script(src='../js/main.js')
