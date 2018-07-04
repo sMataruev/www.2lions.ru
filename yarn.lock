@@ -5712,6 +5712,10 @@ slash@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/slash/-/slash-2.0.0.tgz#de552851a1759df3a8f206535442f5ec4ddeab44"
 
+slick-carousel@^1.8.1:
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/slick-carousel/-/slick-carousel-1.8.1.tgz#a4bfb29014887bb66ce528b90bd0cda262cc8f8d"
+
 slimerjs@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/slimerjs/-/slimerjs-1.0.0.tgz#c5ea457541a1ecd657892c0e013630abc69a2091"
