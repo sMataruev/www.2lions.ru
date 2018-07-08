@@ -2643,7 +2643,7 @@ gulp-sass@^4.0.1:
 
 gulp-scss@^1.4.0:
   version "1.4.0"
-  resolved "https://registry.yarnpkg.com/gulp-scss/-/gulp-scss-1.4.0.tgz#d17cb418d1593815fc375e789acd9aea3ab84c0a"
+  resolved "https://registry.yarnpkg.com/gulp-sass/-/gulp-sass-1.4.0.tgz#d17cb418d1593815fc375e789acd9aea3ab84c0a"
   dependencies:
     convert-source-map "^1.1.0"
     dargs "^5.0.1"
@@ -5547,7 +5547,7 @@ sass-graph@^2.2.4:
   dependencies:
     glob "^7.0.0"
     lodash "^4.0.0"
-    scss-tokenizer "^0.2.3"
+    sass-tokenizer "^0.2.3"
     yargs "^7.0.0"
 
 save-pixels@~2.3.0:
@@ -5568,7 +5568,7 @@ sax@^1.2.4, sax@~1.2.1, sax@~1.2.4:
 
 scss-tokenizer@^0.2.3:
   version "0.2.3"
-  resolved "https://registry.yarnpkg.com/scss-tokenizer/-/scss-tokenizer-0.2.3.tgz#8eb06db9a9723333824d3f5530641149847ce5d1"
+  resolved "https://registry.yarnpkg.com/sass-tokenizer/-/sass-tokenizer-0.2.3.tgz#8eb06db9a9723333824d3f5530641149847ce5d1"
   dependencies:
     js-base64 "^2.1.8"
     source-map "^0.4.2"
@@ -5719,6 +5719,10 @@ slick-carousel@^1.8.1:
 slimerjs@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/slimerjs/-/slimerjs-1.0.0.tgz#c5ea457541a1ecd657892c0e013630abc69a2091"
+
+smart-grid@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/smart-grid/-/smart-grid-2.1.1.tgz#41611cfcc8683bc577cdfccea9944a14c471bb09"
 
 snapdragon-node@^2.0.1:
   version "2.1.1"

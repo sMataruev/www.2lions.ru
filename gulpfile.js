@@ -1,5 +1,45 @@
 "use strict";
 
+const smartgrid = require('smart-grid');
+
+/* It's principal settings in smart grid project */
+let settings = {
+    outputStyle: 'scss', /* less || sass || sass || styl */
+    columns: 12, /* number of grid columns */
+    offset: '30px', /* gutter width px || % || rem */
+    mobileFirst: false, /* mobileFirst ? 'min-width' : 'max-width' */
+    container: {
+        maxWidth: '1200px', /* max-width оn very large screen */
+        fields: '30px' /* side fields */
+    },
+    breakPoints: {
+        lg: {
+            width: '1100px', /* -> @media (max-width: 1100px) */
+        },
+        md: {
+            width: '960px'
+        },
+        sm: {
+            width: '780px',
+            fields: '15px' /* set fields only if you want to change container.fields */
+        },
+        xs: {
+            width: '560px'
+        }
+        /*
+        We can create any quantity of break points.
+
+        some_name: {
+            width: 'Npx',
+            fields: 'N(px|%|rem)',
+            offset: 'N(px|%|rem)'
+        }
+        */
+    }
+};
+
+// smartgrid('./src/views/sass/layout', settings);
+
 const  gulp          = require('gulp');
 const  scss          = require('gulp-scss');
 const  sass          = require('gulp-sass');
@@ -36,12 +76,12 @@ var DIST_DIR = './dist/';
 
 var path = {
     sass: {
-        entry: SRC_DIR + 'views/scss/main.scss',
-        src: SRC_DIR + 'views/scss/**/*.scss',
+        entry: SRC_DIR + 'views/sass/main.scss',
+        src: SRC_DIR + 'views/sass/**/*.scss',
         dist: DIST_DIR + 'css'
     },
     pug: {
-        entry: SRC_DIR + 'views/pug/pages/*.pug',
+        entry: SRC_DIR + 'views/pug/index.pug',
         src: SRC_DIR + 'views/pug/**/*.pug',
         dist: DIST_DIR + 'html'
     },
@@ -84,7 +124,7 @@ gulp.task('serve', ['watch'], () => {
         directory: true,
         startPath: "html/index.html"
     });
-    // gulp.watch([scssPath], ['scss']);
+    // gulp.watch([scssPath], ['sass']);
     gulp.watch("dist/**/*.*").on('change', browser.reload);
     // browser.watch("dist/**/*.*").on('change', browser.reload);
 });
