@@ -77,18 +77,18 @@ var DIST_DIR = './dist/';
 var path = {
     sass: {
         entry: SRC_DIR + 'views/sass/main.scss',
-        src: SRC_DIR + 'views/sass/**/*.scss',
+        src: SRC_DIR   + 'views/sass/**/*.scss',
         dist: DIST_DIR + 'css'
     },
     pug: {
         entry: SRC_DIR + 'views/pug/index.pug',
-        src: SRC_DIR + 'views/pug/**/*.pug',
+        src: SRC_DIR   + 'views/pug/**/*.pug',
         dist: DIST_DIR + 'html'
     },
     sprite: {
-        src: SRC_DIR + 'img/icons/*.png',
+        src: SRC_DIR      + 'img/icons/*.png',
         distImg: DIST_DIR + 'img',
-        imgLocation: '../img/sprite.png',
+        imgLocation:      + '../img/sprite.png',
         distFile: SRC_DIR + '/views/sprite'
     }
 

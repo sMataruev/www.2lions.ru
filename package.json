@@ -7,6 +7,7 @@
     "animate.css": "^3.6.1",
     "browser-sync": "^2.24.5",
     "del": "^3.0.0",
+    "group-css-media-queries": "^1.4.1",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-cache": "^1.0.2",
