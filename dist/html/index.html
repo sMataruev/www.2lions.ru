@@ -20,18 +20,84 @@
   </head>
   <body>
     <div class="wrapper">
-      <menu class="nav-block">
-        <ul class="nav-block-items">
-          <li class="nav-block-item"><a class="nav-block-item__link link-active" href="#">ГЛАВНАЯ</a></li>
-          <li class="nav-block-item"><a class="nav-block-item__link link-active" href="#">О НАС</a></li>
-          <li class="nav-block-item"><a class="nav-block-item__link link-active" href="#">УСЛУГИ</a></li>
-          <li class="nav-block-item"><a class="nav-block-item__link link-active" href="#">РАБОТЫ</a></li>
-        </ul>
-        <div class="nav-block-contacts">
-          <div class="nav-block-contacts__phone">+38 050 971 99 53</div>
-          <button class="nav-block-contacts__btn nav-block-contact__btn--active">СВЯЗАТЬСЯ С НАМИ</button>
+      <section class="nav_block">
+        <div class="menu nav-block">
+          <ul class="nav-block-items">
+            <li class="nav-block-item"><a class="nav-block-item__link link-active" href="#">ГЛАВНАЯ</a></li>
+            <li class="nav-block-item"><a class="nav-block-item__link link-active" href="#">О НАС</a></li>
+            <li class="nav-block-item"><a class="nav-block-item__link link-active" href="#">УСЛУГИ</a></li>
+            <li class="nav-block-item"><a class="nav-block-item__link link-active" href="#">РАБОТЫ</a></li>
+          </ul>
+          <div class="nav-block-contacts">
+            <div class="nav-block-contacts__phone">+38 050 971 99 53</div>
+            <button class="nav-block-contacts__btn nav-block-contact__btn--active">СВЯЗАТЬСЯ С НАМИ</button>
+          </div>
         </div>
-      </menu>
+      </section>
+      <!--include ../mixins/mixins-->
+      <section class="header">
+        <header class="header_block">
+          <!--img(src="../img/Assets/HeaderBackground.jpg").header_block__img-->
+          <div class="header_block__logo"></div>
+          <h1 class="header_block__offer_text">ПОЛИГРАФИЯ<br>РЕКЛАМА<br>БРЕНДИНГ</h1>
+          <div class="header_block__under_text"></div>
+          <p class="header_block__text">ЛЮБОЙ СЛОЖНОСТИ</p>
+        </header>
+      </section>
+      <section class="two_lions">
+        <div class="twol_block">
+          <h2 class="twol_block__header_text">О НАС "ДВА ЛЬВА"</h2>
+          <div class="big_logo"><img class="big_logo__img"></div>
+          <div class="advertising">
+            <h3 class="advertising_header_text">РЕКЛАМА ОТ А ДО Я</h3>
+            <div class="advertising__desc">Полный рекламный аутсорсинг:</div>
+            <ul class="advertising_items">
+              <li class="advertising_item">Полиграфическая рекламная продукция</li>
+              <li class="advertising_item">Наружная реклама</li>
+              <li class="advertising_item">Реклама в печатных изданиях</li>
+              <li class="advertising_item">Реклама на радио и телевидении</li>
+            </ul>
+          </div>
+          <div class="describe_block">
+            <ul class="desc_items">
+              <li class="desc_item">Работаем на Вашу узнаваемость</li>
+              <li class="desc_item">Любим сверхзадачи</li>
+              <li class="desc_item">Настроены на долгосрочное сотрудничество</li>
+              <li class="desc_item">Знаем, что Вы цените своих клиентов, поэтому гарантируем качество оказываевых услуг</li>
+            </ul>
+          </div>
+          <div class="creativity_block">
+            <h3 class="creativity_block__header_text">КРЕАТИВНОСТЬ</h3>
+            <p class="creativity_block__text_first">Мы в курсе передовых тенденций в мире рекламы и маркетинга.</p>
+            <p class="creativity_block__text_second">Постоянно ведём поиск новых решений и открытий</p>
+          </div>
+          <div class="quality_block">
+            <h3 class="quality_block__header_text">КАЧЕСТВО</h3>
+            <p class="quality_block__text_first">Хороший товар не нуждается в рекламе - говорят теоретики.</p>
+            <p class="quality_block__text_second">Практики говорят: хороший товар нуждается в хорошей рекламе.</p>
+            <p class="quality_block__text_third">Мы делаем качественную рекламу для Вас.</p>
+          </div>
+          <div class="operatively_block">
+            <h3 class="operatively_header_text">ОПЕРАТИВНОСТЬ</h3>
+            <p class="operatively_block__text_first">Мы оперативно решаем поставленные задачи</p>
+            <p class="operatively_block__text_second">С нами Вы опередите конкурентов, реализуете вновь открывшиеся возможности и тенденции.</p>
+          </div>
+        </div>
+      </section>
+      <!--section.advertising-->
+      <!--	.advertising_block-->
+      <!--		h2.advertising_block__header_block-->
+      <!--			| НАШИ-->
+      <section class="gallery">
+        <div class="gallery_blocks">
+          <h2 class="gallery_blocks__header_text">ГАЛЕРЕЯ НАШИХ РАБОТ</h2>
+          <div class="gallery_block_lion"><img class="gallery_block__lion_img"></div>
+          <div class="gallery_block_journal"><img class="gallery_block__journal_img"></div>
+          <div class="gallery_block_box"><img class="gallery_block__box_img"><img class="gallery_block__box_img2"></div>
+          <div class="gallery_block_shirt"><img class="gallery_block__shirt_img"><img class="gallery_block__pack_img"></div>
+          <h2 class="gallery_blocks__footer_text">НАШИ УСЛУГИ</h2>
+        </div>
+      </section>
     </div>
     <script src="../js/jquery.min.js"></script>
     <script src="../js/jquery.waypoints.js"></script>

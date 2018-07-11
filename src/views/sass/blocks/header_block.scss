@@ -1,2 +1,44 @@
+.header {
+  display: flex;
+}
 
+.header_block {
+  background: black url(../img/Assets/Header_Background.png) no-repeat center bottom;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  height: 600px;
+  
+  //&__img {
+  //  position: absolute;
+  //  width: 100%;
+  //  height: auto;
+  //}
+  &__logo {
+    background: #62bd72 url("../img/Assets/Logo texture.jpg")no-repeat top center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    right: 20px;
+    width: 80px;
+    height: 150px;
+  }
+  &__offer_text {
+    position: absolute;
+    top: 15%;
+    left: 25%;
+  }
+  &__under_text {
+    position: absolute;
+    bottom: 40%;
+    width: 30%;
+    height: 2px;
+    background-color: white;
+  }
+  &__text {
+    position: absolute;
+    top: 120px;
+    left: 0;
+  }
+}
 

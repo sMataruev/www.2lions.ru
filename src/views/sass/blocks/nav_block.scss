@@ -1,4 +1,6 @@
 @import "../layout/smart-grid";
 .wrapper {
-  @include reset();
+  @include wrapper();
 }
+
+
