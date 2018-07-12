@@ -1,6 +1,8 @@
 @import "../sass/layout/smart-grid";
 @include reset();
-
+.wrapper{
+  @include wrapper();
+}
 $white : #efeee9;
 $beige: #eeebdf;
 $main-font-color : #373e42;
