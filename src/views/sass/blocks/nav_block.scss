@@ -1,7 +1,32 @@
-.nav-block{
-  margin: 0;
-  padding: 0;
+@import "../layout/smart-grid";
+
+.nav-block {
 }
 
+.nav_block_items {
 
+  display: flex;
+  list-style: none;
+}
 
+.nav_block_menu {
+  display: flex;
+  height: 90px;
+  justify-content: start;
+  align-items: center;
+}
+
+.nav_block_item {
+
+  &__link {
+    padding: 20px 30px;
+    text-decoration: none;
+    display: block;
+
+  }
+}
+
+.nav_block_contacts {
+  margin: auto;
+  display: flex;
+}
