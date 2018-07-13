@@ -1,12 +1,8 @@
 @import "../layout/smart-grid";
 
 .nav-block {
-}
-
-.nav_block_items {
-
-  display: flex;
-  list-style: none;
+  width: 100%;
+  height: auto;
 }
 
 .nav_block_menu {
@@ -16,17 +12,46 @@
   align-items: center;
 }
 
+.nav_block_items {
+  margin-left: 220px;
+  display: flex;
+  list-style: none;
+}
+
 .nav_block_item {
 
   &__link {
-    padding: 20px 30px;
+    padding: 10px 25px;
     text-decoration: none;
     display: block;
-
+    color: black;
   }
 }
 
 .nav_block_contacts {
-  margin: auto;
+  margin: 0 auto;
   display: flex;
+  //background-color: #373e42;
+
+  &__phone {
+    align-self: center;
+    color: black;
+    margin-right: 40px;
+    font-size: 1.3rem;
+  }
+
+  &__btn {
+    background-color: #e23e18;
+    border: 0;
+    padding: 20px 40px;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 100ms ease-in-out;
+
+    &:hover {
+      background-color: #c03b18
+    }
+  }
 }
+

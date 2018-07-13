@@ -1,7 +1,7 @@
 @import "../sass/layout/smart-grid";
 @include reset();
 .wrapper{
-  @include wrapper();
+  //@include wrapper();
 }
 $white : #efeee9;
 $beige: #eeebdf;
