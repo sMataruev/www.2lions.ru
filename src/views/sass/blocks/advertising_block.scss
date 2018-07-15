@@ -42,6 +42,8 @@
   @extend .business_card;
   &__header_text{
     @extend .business_card__header_text;
+    position: relative;
+    top:10px;
   }
   &__video_advertising_img{
     @extend  .business_card__business_card_img;
