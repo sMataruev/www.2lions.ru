@@ -158,6 +158,7 @@ gulp.task('scss', () => {
         .pipe(concat('styles.css'))
         .pipe(sourcemaps.write())
         // .pipe(cssnano())
+        // .pipe(csso())
         .pipe(gulp.dest(path.sass.dist))
         .pipe(browser.stream(true));
 });
