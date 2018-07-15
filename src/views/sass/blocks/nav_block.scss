@@ -1,5 +1,4 @@
 @import "../layout/smart-grid";
-
 .nav-block {
   width: 100%;
   height: auto;
@@ -20,6 +19,7 @@
   align-items: center;
   flex-wrap: nowrap;
   justify-content: space-evenly;
+  font-family: CenturyGothic,sans-serif;
 }
 
 .nav_block_item {
@@ -53,6 +53,7 @@
     color: black;
     font-size: 1.3rem;
     display: block;
+    font-family: CenturyGothic,sans-serif;
 
   }
   //Правая часть навигации кнлпка
@@ -64,7 +65,9 @@
     cursor: pointer;
     outline: none;
     transition: background-color 100ms ease-in-out;
-    //margin-right: 40px;
+    font-family: CenturyGothic-Bold, sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.1rem;
     &:hover {
       background-color: #c03b18
     }

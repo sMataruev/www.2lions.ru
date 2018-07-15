@@ -12,12 +12,11 @@
   padding-left: 52px;
   &__header_text {
     color: #897756;
-    font-family: sans-serif;
-    font-size: 1.6rem;
+    font-family: Bebas, sans-serif;
+    font-size: 2.7rem;
     font-weight: bold;
   }
 }
-
 .printing_row_two {
   position: relative;
   display: flex;
@@ -26,7 +25,6 @@
   align-content: space-evenly;
   align-items: center;
 }
-
 .printing_row_two_border {
   position: absolute;
   top: 10px;
@@ -38,6 +36,7 @@
   background: linear-gradient(45deg, #b29b70 0%,#ddd7b3 47%,#b29b70 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b29b70', endColorstr='#b29b70',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
+
 .business_card {
   display: flex;
   flex-direction: column;
@@ -47,8 +46,8 @@
   height: 336px;
   margin: 20px 20px 60px;
   background-color: #fff;
-  -webkit-box-shadow: 0 0 15px 0 #B3B3B3;
-  box-shadow: 0 0 15px 0 #bbbbbb;
+  -webkit-box-shadow: 0 0 15px 0 #c3c3c3;
+  box-shadow: 0 0 15px 0 #c3c3c3;
   box-sizing: border-box;
   padding: 20px;
   overflow: hidden;
@@ -59,17 +58,17 @@
   }
   &__header_text {
     font-size: 1.6rem;
-    font-family: sans-serif;
+    font-family: CenturyGothic, sans-serif;
     align-self: start;
+    margin-bottom: auto;
   }
   &:hover {
     cursor: pointer;
-    -webkit-box-shadow: 0 13px 25px 0 #868686;
-    box-shadow: 0 13px 25px 0 #868686;
+    -webkit-box-shadow: 0 13px 25px 0 #c3c3c3;
+    box-shadow: 0 13px 25px 0 #c3c3c3;
   }
 
 }
-
 .fluer_card {
   @extend .business_card;
 
@@ -81,7 +80,6 @@
     @extend .business_card__header_text;
   }
 }
-
 .calender_card {
   @extend .business_card;
   &__calender_card_img {
@@ -91,10 +89,8 @@
     @extend .business_card__header_text;
   }
 }
-
 .printing_row_three {
   @extend .printing_row_two;
-
 }
 
 .magazine_card {
@@ -106,7 +102,6 @@
     @extend .business_card__header_text;
   }
 }
-
 .billboard_card {
   @extend .business_card;
   &__billboard_card_img {
@@ -116,7 +111,6 @@
     @extend .business_card__header_text;
   }
 }
-
 .folder_card {
   @extend .business_card;
   &__folder_card_img {
@@ -129,8 +123,8 @@
 
 .printing_row_four {
   @extend .printing_row_two;
-}
 
+}
 .stickers {
   @extend .business_card;
   &__stickers_img {
@@ -140,7 +134,6 @@
     @extend .business_card__header_text;
   }
 }
-
 .menus {
   @extend .business_card;
   &__menus_img {

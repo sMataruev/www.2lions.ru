@@ -1,0 +1,63 @@
+.advertising_sec {
+
+}
+.advertising_sec_row_five{
+  @extend .printing_row_one;
+
+  &__header_text {
+    @extend .printing_row_one__header_text;
+  }
+
+}
+
+.advertising_sec_row_six {
+
+  @extend .printing_row_two;
+  position: relative;
+}
+.advertising_sec_row_six_border{
+  @extend .printing_row_two_border;
+}
+.outdoor_advertising{
+  @extend .business_card;
+
+  &__header_text{
+    @extend .business_card__header_text;
+  }
+  &__outdoor_advertising_img{
+    @extend  .business_card__business_card_img;
+  }
+}
+.promo {
+  @extend .business_card;
+  &__header_text{
+    @extend .business_card__header_text;
+  }
+
+  &__promo_img{
+    @extend  .business_card__business_card_img;
+  }
+}
+.video_advertising{
+  @extend .business_card;
+  &__header_text{
+    @extend .business_card__header_text;
+  }
+  &__video_advertising_img{
+    @extend  .business_card__business_card_img;
+  }
+}
+
+.advertising_sec_row_seven{
+  @extend .printing_row_two;
+}
+.events{
+  @extend .business_card;
+  &__header_text {
+    @extend .business_card__header_text;
+  }
+  &__events_img{
+    @extend  .business_card__business_card_img;
+  }
+}
+

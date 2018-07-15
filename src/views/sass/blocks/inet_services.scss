@@ -1,0 +1,47 @@
+.inet_services {
+}
+.inet_services_row_twelve{
+  @extend .printing_row_one;
+}
+.printing_row_twelve__header_text{
+  @extend .printing_row_one__header_text;
+}
+.inet_services_row_thirteen {
+  @extend .printing_row_two;
+  position: relative;
+}
+.inet_services_row_thirteen_border {
+  @extend .printing_row_two_border;
+}
+.site_app_dev{
+  @extend .business_card;
+
+  &__header_text{
+    @extend .business_card__header_text;
+  }
+  &__img{
+    @extend .business_card__business_card_img;
+  }
+}
+.make_content{
+  @extend .business_card;
+
+  &__header_text{
+    @extend .business_card__header_text;
+  }
+  &__img{
+    @extend .business_card__business_card_img;
+  }
+}
+.call_centr{
+  @extend .business_card;
+
+  &__header_text{
+    @extend .business_card__header_text;
+
+  }
+  &__img {
+    //@extend .business_card__business_card_img;
+    width: 75%;
+  }
+}

@@ -1,0 +1,108 @@
+.branding {
+
+}
+
+.branding_row_eight{
+  @extend .printing_row_one;
+}
+.printing_row_eight__header_text{
+  @extend .printing_row_one__header_text;
+}
+.branding_row_nine {
+  @extend .printing_row_two;
+  position: relative;
+}
+.branding_row_nine_border {
+  @extend .printing_row_two_border;
+}
+.branding_row_ten {
+  @extend .printing_row_two;
+}
+.branding_row_eleven {
+  @extend .printing_row_two;
+}
+
+.logo_dev {
+  @extend .business_card;
+
+  &__header_text {
+    @extend .business_card__header_text;
+
+  }
+  &__logo_dev_img{
+    //@extend .business_card__business_card_img;
+    width: 70%;
+  }
+}
+.style {
+  @extend .business_card;
+
+  &__header_text {
+    @extend .business_card__header_text;
+  }
+  &__style_img {
+    @extend .business_card__business_card_img;
+  }
+}
+.presentation {
+  @extend .business_card;
+
+  &__header_text {
+    @extend .business_card__header_text;
+  }
+  &__presentation_img {
+    @extend .business_card__business_card_img;
+  }
+}
+.packaging {
+  @extend .business_card;
+
+  &__header_text {
+    @extend .business_card__header_text;
+  }
+  &__packaging_img {
+    @extend .business_card__business_card_img;
+  }
+}
+.clothing {
+  @extend .business_card;
+
+  &__header_text {
+    @extend .business_card__header_text;
+
+  }
+  &__clothing_img {
+    @extend .business_card__business_card_img;
+
+  }
+}
+.paraphernalia {
+  @extend .business_card;
+
+  &__header_text {
+    @extend .business_card__header_text;
+  }
+  &__paraphernalia_img {
+    @extend .business_card__business_card_img;
+  }
+}
+.prizes {
+  @extend .business_card;
+
+  &__header_text {
+    @extend .business_card__header_text;
+  }
+  &__prizes_img {
+    @extend .business_card__business_card_img;
+  }
+}
+.branding_cars {
+  @extend .business_card;
+
+  &__header_text {
+    @extend .business_card__header_text;
+  }
+  &__internet_servants_img {
+    @extend .business_card__business_card_img;
+  }
+}

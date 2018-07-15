@@ -11,39 +11,41 @@
   height: 600px;
   overflow: hidden;
   &__logo {
-    background:  url("../img/Icons/lion_log2.svg")no-repeat center center;
+    background: url("../img/Icons/lion_log2.svg") no-repeat center center;
     //background-size: cover;
-    opacity: 0.7;
+    opacity: 0.8;
+    mix-blend-mode: overlay;
     position: absolute;
-    top: 15%;
-    right: 20%;
+    top: 20%;
+    right: 15%;
     width: 256px;
     height: 340px;
   }
   &__offer_text {
     color: #ffffff;
-    font-size: 3.5rem;
+    font-size: 4rem;
     font-weight: bold;
-    font-family: sans-serif;
+    font-family: Intro-Bold-Alt,sans-serif;
     position: absolute;
-    top: 15%;
+    top: 22%;
     left: 15%;
+    line-height: 4rem;
   }
   &__under_text {
     position: absolute;
-    bottom: 42%;
+    bottom: 37%;
     width: 600px;
     height: 3px;
     left: 15.3%;
     background-color: white;
   }
   &__text {
-    font-size: 2.5rem;
+    font-size: 3rem;
     position: absolute;
-    bottom: 32%;
+    bottom: 23%;
     left: 15%;
     color: #c5b865;
-    font-family: sans-serif;
+    font-family: Code-PPro,sans-serif;
   }
 }
 
