@@ -13,6 +13,7 @@
     <meta name="msapplication-navbutton-color" content="#000">
     <meta name="apple-mobile-web-app-status-bar-style" content="#000">
     <link rel="icon" href="../img/Icons/title_lion.png">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <!-- подключение сss-->
     <!--link(rel="stylesheet", type="text/css"  href="../css/normalize.css")-->
     <link rel="stylesheet" type="text/css" href="../css/styles.css">
@@ -20,29 +21,30 @@
     </title>
   </head>
   <body>
-    <div class="wrapper">
-      <section class="nav_block">
-        <div class="nav_block_menu">
-          <ul class="nav_block_items">
-            <li class="nav_block_item"><a class="nav_block_item__link link--active" href="#">ГЛАВНАЯ</a></li>
-            <li class="nav_block_item"><a class="nav_block_item__link link--active" href="#">УСЛУГИ</a></li>
-            <li class="nav_block_item"><a class="nav_block_item__link link--active" href="#">РАБОТЫ</a></li>
-            <li class="nav_block_item"><a class="nav_block_item__link link--active" href="#">О НАС</a></li>
-          </ul>
-          <div class="nav_block_contacts">
-            <div class="nav_block_contacts__phone">+38 050 971 99 53</div>
-            <button class="nav_block_contacts__btn nav_block_contacts__btn--active">СВЯЗАТЬСЯ С НАМИ</button>
-          </div>
+    <!--.wrapper-->
+    <section class="nav_block">
+      <div class="nav_block_menu">
+        <ul class="nav_block_items">
+          <li class="nav_block_item"><a class="nav_block_item__link link--active" href="#">ГЛАВНАЯ</a></li>
+          <li class="nav_block_item"><a class="nav_block_item__link link--active" href="#">УСЛУГИ</a></li>
+          <li class="nav_block_item"><a class="nav_block_item__link link--active" href="#">РАБОТЫ</a></li>
+          <li class="nav_block_item"><a class="nav_block_item__link link--active" href="#">О НАС</a></li>
+        </ul>
+        <div class="nav_block_contacts">
+          <div class="nav_block_contacts__phone">+38 050 971 99 53</div>
+          <button class="nav_block_contacts__btn nav_block_contacts__btn--active">СВЯЗАТЬСЯ С НАМИ</button>
         </div>
-      </section>
-      <section class="header">
-        <header class="header_block">
-          <div class="header_block__logo"></div>
-          <h1 class="header_block__offer_text">ПОЛИГРАФИЯ<br>РЕКЛАМА<br>БРЕНДИНГ</h1>
-          <div class="header_block__under_text"></div>
-          <p class="header_block__text">ЛЮБОЙ СЛОЖНОСТИ</p>
-        </header>
-      </section>
+      </div>
+    </section>
+    <section class="header">
+      <header class="header_block">
+        <div class="header_block__logo"></div>
+        <h1 class="header_block__offer_text">ПОЛИГРАФИЯ<br>РЕКЛАМА<br>БРЕНДИНГ</h1>
+        <div class="header_block__under_text"></div>
+        <p class="header_block__text">ЛЮБОЙ СЛОЖНОСТИ</p>
+      </header>
+    </section>
+    <div class="wrapper">
       <div class="wrapper_body">
         <section class="two_lions">
           <div class="twol_block">
@@ -127,8 +129,6 @@
           <div class="calender_card">
             <p class="calender_card__header_text">Календари</p><img class="calender_card__calender_card_img" src="../img/Icons/Services/Calendar.png">
           </div>
-        </div>
-        <div class="printing_row_three">
           <div class="magazine_card">
             <p class="magazine_card__header_text">Газеты</p><img class="magazine_card__magazine_card_img" src="../img/Icons/Services/Newspapers.png">
           </div>
@@ -138,8 +138,6 @@
           <div class="folder_card">
             <p class="folder_card__header_text">Конверты, папки, ручки</p><img class="folder_card__folder_card_img" src="../img/Icons/Services/Stationary.png">
           </div>
-        </div>
-        <div class="printing_row_four">
           <div class="stickers">
             <p class="stickers__header_text">Наклейки</p><img class="stickers__stickers_img" src="../img/Icons/Services/Stickers.png">
           </div>
@@ -147,6 +145,9 @@
             <p class="menus__header_text">Меню, ценники</p><img class="menus__menus_img" src="../img/Icons/Services/Menu.png">
           </div>
         </div>
+        <!--.printing_row_three-->
+        <!---->
+        <!--.printing_row_four-->
       </section>
       <section class="advertising_sec">
         <div class="advertising_sec_row_five">
@@ -164,12 +165,11 @@
           <div class="video_advertising">
             <p class="video_advertising__header_text">Видео и аудио реклама</p><img class="video_advertising__video_advertising_img" src="../img/Icons/Services/Audio-Video.png">
           </div>
-        </div>
-        <div class="advertising_sec_row_seven">
           <div class="events">
             <p class="events__header_text">Выставки, Events</p><img class="events__events_img" src="../img/Icons/Services/Expo.png">
           </div>
         </div>
+        <!--.advertising_sec_row_seven-->
       </section>
       <section class="branding">
         <div class="branding_row_eight">
@@ -186,8 +186,6 @@
           <div class="presentation">
             <p class="presentation__header_text">Презентации</p><img class="presentation__presentation_img" src="../img/Icons/Services/Presentation.png">
           </div>
-        </div>
-        <div class="branding_row_ten">
           <div class="packaging">
             <p class="packaging__header_text">Фирменная упаковка</p><img class="packaging__packaging_img" src="../img/Icons/Services/Packing.png">
           </div>
@@ -197,8 +195,6 @@
           <div class="paraphernalia">
             <p class="paraphernalia__header_text">Атрибутика</p><img class="paraphernalia__paraphernalia_img" src="../img/Icons/Services/Flags-and-odds.png">
           </div>
-        </div>
-        <div class="branding_row_eleven">
           <div class="prizes">
             <p class="prizes__header_text">Призы, сувениры</p><img class="prizes__prizes_img" src="../img/Icons/Services/Prizes.png">
           </div>
@@ -206,6 +202,9 @@
             <p class="branding_cars__header_text">Брендирование авто</p><img class="branding_cars__internet_servants_img" src="../img/Icons/Services/Auto-Branding.png">
           </div>
         </div>
+        <!--.branding_row_ten-->
+        <!---->
+        <!--.branding_row_eleven-->
       </section>
       <section class="inet_services">
         <div class="inet_services_row_twelve">
@@ -224,7 +223,33 @@
           </div>
         </div>
       </section>
-      <!--include ../pug/pages/map_block-->
+      <section class="map">
+        <div class="map_row">
+          <div class="map_block_desc">
+            <div class="map_block_desc_adress"><img class="map_block_desc_adress__adress_icon" src="../img/Icons/placeholder.svg">
+              <div class="map_block_desc_adress_col2">
+                <h3 class="map_block_desc_adress__adress_text">АДРЕС</h3>
+                <p class="map_block_desc_adress__adress_desc">пр-т Мира 17,<br>	8 этаж офис 86</p>
+              </div>
+            </div>
+            <div class="map_block_call_adress"><img class="map_block_call_adress__adress_icon" src="../img/Icons/phone.svg">
+              <div class="map_block_call_adress_col2">
+                <h3 class="map_block_call_adress__adress_text">ЗВОНИТЕ НАМ</h3>
+                <p class="map_block_call_adress__adress_desc">+38 (071) 111 11 11<br>+38 (071) 111 11 11</p>
+              </div>
+            </div>
+            <div class="map_block_email"><img class="map_block_email__adress_icon" src="../img/Icons/message.svg">
+              <div class="map_block_email_col2">
+                <h3 class="map_block_email__adress_text">EMAIL</h3>
+                <p class="map_block_email__adress_desc">reklama@2lion.ru</p>
+              </div>
+            </div>
+          </div>
+          <div class="map_block_map">
+            <div class="map_block_map__yandex_map" id="myMap"></div>
+          </div>
+        </div>
+      </section>
     </div>
     <script src="../js/jquery.min.js"></script>
     <script src="../js/jquery.waypoints.js"></script>

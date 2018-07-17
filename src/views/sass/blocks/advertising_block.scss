@@ -47,8 +47,10 @@
   }
   &__video_advertising_img{
     @extend  .business_card__business_card_img;
+    width: 80%;
   }
 }
+
 
 .advertising_sec_row_seven{
   @extend .printing_row_two;
