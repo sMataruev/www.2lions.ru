@@ -10,6 +10,17 @@
   padding-right: 15%;
   height: 200px;
 
+  @include tablets{
+    justify-content: center;
+    height: 100px;
+    padding: 0;
+  }
+
+  @include phones{
+    justify-content: center;
+    padding: 0;
+  }
+
 }
 //заголовочный текст в секции
 .gallery_blocks__header_text {
@@ -18,7 +29,14 @@
   align-self: center;
   font-family: Bebas,sans-serif;
   font-weight: bold;
+  transition: all 200ms ease-in-out;
+  @include tablets {
+    font-size: 3rem;
+  }
 
+  @include phones{
+    font-size: 2.3rem;
+  }
 }
 //стилизация текста в секции заголовка
 .gallery_blocks__header_color{
@@ -69,6 +87,17 @@
   padding-right: 15%;
   height: 200px;
 
+  @include tablets{
+    font-size: 3rem;
+    justify-content: center;
+    height: 100px;
+    padding: 0;
+  }
+  @include phones {
+    justify-content: center;
+    padding: 0;
+
+  }
 }
 .gallery_blocks__footer_text{
   font-size: 4rem;
@@ -76,9 +105,16 @@
   align-self: center;
   font-family: Bebas, sans-serif;
   font-weight: bold;
-
+  transition: all 200ms ease-in-out;
   &--color{
     color: #8f7e5f;
+  }
+
+  @include tablets {
+    font-size: 3rem;
+  }
+  @include phones{
+    font-size: 2.3rem;
   }
 }
 

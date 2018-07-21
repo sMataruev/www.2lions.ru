@@ -3,6 +3,12 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  transition: all 200ms ease-in-out;
+
+  @include tablets{
+    margin-top: 10px;
+    transition: all 200ms ease-in-out;
+  }
 }
 
 .socials_block {
@@ -13,7 +19,7 @@
   //flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  align-items: start;
+  align-items: center;
   position: relative;
 }
 
@@ -24,6 +30,10 @@
   background-color: #f5b02c;
   position: absolute;
   bottom: 0;
+
+  @include tablets{
+    height: 1px;
+  }
 }
 
 //ul -> li -> a -> img иконки соц.сети
@@ -35,6 +45,10 @@
 .socials_block_item {
   width: 40px;
   margin-right: 25px;
+
+  @include tablets{
+    width: 30px;
+  }
   &:last-child{
     margin-right: 0;
   }
@@ -51,14 +65,17 @@
   }
 }
 
+
+
+
 //Столбцы с ссылками
 .content_footer_block {
   width: 100%;
   background-color: #262b33;
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: space-evenly;
-  align-items: start;
+  //align-items: flex-start;
   position: relative;
   padding-top: 50px;
   padding-bottom: 50px;
@@ -66,12 +83,58 @@
 }
 
 .content_footer_block_col1 {
-  margin-right: 20px;
+  //width: 250px;
+  //margin-right: 25px;
+  margin-bottom: 30px;
+  order: 0;
+  @include tablets {
+    margin-bottom: 0;
+  }
 }
+.content_footer_block_col1_items {
+  display: flex;
+  flex-direction: column;
+  @include tablets {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
+.content_footer_block_col1_item {
+  margin-bottom: 15px;
+  @include tablets {
+    margin-bottom: 0;
+  }
 
+  &__about_us {
+    font-family: Bebas, sans-serif;
+    font-size: 1.4rem;
+    color: #f5b02c;
+    text-decoration: none;
+
+    @include tablets{
+      margin: 0 15px 0 15px;
+    }
+
+  }
+
+  &__gallary {
+    @extend .content_footer_block_col1_item__about_us;
+  }
+
+  &__contacts {
+    @extend .content_footer_block_col1_item__about_us;
+  }
+}
 
 .content_footer_block_printing {
   @extend .content_footer_block_col1;
+  order: 2;
+  @include tablets{
+    display: none;
+  }
+
+
 }
 .content_footer_block_printing_items {
 
@@ -85,6 +148,8 @@
     text-decoration: none;
     font-family: CenturyGothic, sans-serif;
     color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 100;
   }
   &__flyer {
     @extend .content_footer_block_printing_item__bcard;
@@ -109,8 +174,12 @@
   }
 }
 
-.content_footer_block_advert{
-@extend .content_footer_block_col1;
+.content_footer_block_advert {
+  @extend .content_footer_block_col1;
+  order: 4;
+  @include tablets{
+    display: none;
+  }
 }
 .content_footer_block_advert_items{
 
@@ -136,6 +205,10 @@
 
 .content_footer_block_branding{
 @extend .content_footer_block_col1;
+  order: 3;
+  @include tablets{
+    display: none;
+  }
 }
 .content_footer_block_branding_items{
 
@@ -171,34 +244,14 @@
   }
 }
 
-.content_footer_block_inet{
-
-}
-.content_footer_block_col1_items {
-  display: flex;
-  flex-direction: column;
-}
-.content_footer_block_col1_item {
-  margin-bottom: 15px;
-  &__about_us {
-    font-family: Bebas, sans-serif;
-    font-size: 1.6rem;
-    color: #f5b02c;
-    text-decoration: none;
-  }
-
-
-  &__gallary {
-    @extend .content_footer_block_col1_item__about_us;
-  }
-
-  &__contacts {
-    @extend .content_footer_block_col1_item__about_us;
+.content_footer_block_inet {
+  @extend .content_footer_block_col1;
+  order: 5;
+  @include tablets{
+    display: none;
   }
 }
-
-.content_footer_block_inet_items{
-
+.content_footer_block_inet_items {
 }
 .content_footer_block_inet_item{
   @extend .content_footer_block_col1_item;
@@ -226,6 +279,11 @@
     align-self: center;
     font-family: CenturyGothic, sans-serif;
     color: #f5b02c;
+
+    @include tablets {
+      font-size: 0.8rem;
+      font-weight: 100;
+    }
   }
 }
 .copyrights_block_line {

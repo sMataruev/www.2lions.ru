@@ -1,5 +1,4 @@
 ymaps.ready(init);
-
 function init() {
     let myMap;
     let TwoLions;
@@ -12,7 +11,7 @@ function init() {
     });
     myMap.behaviors.disable([
         // 'drag',
-        // 'scrollZoom',
+        'scrollZoom',
         'dblClickZoom',
     ]);
 
@@ -40,6 +39,33 @@ function init() {
 
     myMap.geoObjects.add(TwoLions);
 }
+
+
+$(()=>{
+
+
+
+
+
+
+
+    //Кнопка бургер
+    $('.menu').click(function() {
+
+        let burger = $('.header_hamburger');
+
+        burger.toggleClass('header_hamburger_open');
+
+
+        if($(this).is('.active:not(.back)')) {
+            $(this).addClass('back');
+        } else if ($(this).is('.back')) {
+            $(this).removeClass('back');
+        } else {
+            $(this).addClass('active');
+        }
+    });
+});
 
 
 
