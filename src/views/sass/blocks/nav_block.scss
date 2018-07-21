@@ -6,13 +6,21 @@
   display: flex;
   align-self: center;
   justify-content: space-between;
-
   @include tablets {
     display: none;
   }
-
 }
+.nav_block_placeholder{
 
+  height: 15vh;
+
+  @include tablets{
+    display: none;
+  }
+  @include phones{
+    display: none;
+  }
+}
 .nav_block_menu {
   margin-left: 20px;
   width: 50%;
@@ -85,3 +93,11 @@
   }
 }
 
+.stuck {
+  transition: all 400ms ease-in-out;
+  height: 60px ;
+  background-color: #f7f8ff;
+  position: fixed;
+  z-index: 500;
+  opacity: 0.8;
+}

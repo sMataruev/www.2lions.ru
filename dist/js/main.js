@@ -1,4 +1,109 @@
-ymaps.ready(init);
+
+;
+$(() => {
+
+
+
+
+
+    //Обвертка для блока nav_block чтобы header не прыгал когда nav_block прилипает
+    $('.nav_block').wrap("<div class='nav_block_placeholder'></div>");
+    $('.nav_block_placeholder').height($('.nav_block').outerHeight());
+    //конец обвертки
+
+
+    //Прилипалка для блока nav_block
+    $('.nav_block').waypoint(()=>{
+        $('.nav_block').toggleClass('stuck');
+    }, {
+        offset: '-100'
+    });
+
+    //Анимации блок
+    $('.header_block__logo').animated('fadeIn');
+
+    $('.header_block__offer_text').animated('bounceInLeft');
+    $('.header_block__under_text').animated('bounceInRight');
+    $('.header_block__text').animated('fadeInRight');
+
+
+    $('.printing_row_two_border').animated('bounceInLeft');
+    $('.advertising_sec_row_six_border').animated('bounceInLeft');
+    $('.branding_row_nine_border').animated('bounceInLeft');
+    $('.inet_services_row_thirteen_border').animated('bounceInLeft');
+
+
+    $('.creativity_block').animated('fadeInUp');
+    $('.operatively_block').animated('fadeInUp');
+    $('.quality_block').animated('fadeInUp');
+    $('.twol_block__header_text').animated('bounceInLeft');
+    $('.gallery_blocks__header_text').animated('bounceInLeft');
+    $('.gallery_blocks__footer_text').animated('bounceInLeft');
+
+
+    $('.printing_row_one__header_text').animated('fadeInRight');
+    $('.business_card').animated('fadeInUp');
+    $('.fluer_card').animated('fadeInUp');
+    $('.calender_card').animated('fadeInUp');
+    $('.magazine_card').animated('fadeInUp');
+    $('.billboard_card').animated('fadeInUp');
+    $('.folder_card').animated('fadeInUp');
+    $('.stickers').animated('fadeInUp');
+    $('.menus').animated('fadeInUp');
+
+    $('.advertising_sec_row_five__header_text').animated('fadeInRight');
+    $('.outdoor_advertising').animated('fadeInUp');
+    $('.promo').animated('fadeInUp');
+    $('.video_advertising').animated('fadeInUp');
+    $('.events').animated('fadeInUp');
+
+
+    $('.printing_row_twelve__header_text').animated('fadeInRight');
+    $('.site_app_dev').animated('fadeInUp');
+    $('.make_content').animated('fadeInUp');
+    $('.call_centr').animated('fadeInUp');
+
+    $('.printing_row_eight__header_text').animated('fadeInRight');
+    $('.logo_dev').animated('fadeInUp');
+    $('.style').animated('fadeInUp');
+    $('.presentation').animated('fadeInUp');
+    $('.packaging').animated('fadeInUp');
+    $('.clothing').animated('fadeInUp');
+    $('.paraphernalia').animated('fadeInUp');
+    $('.prizes').animated('fadeInUp');
+    $('.branding_cars').animated('fadeInUp');
+
+
+
+
+
+
+
+
+    //Кнопка бургер
+    $('.menu').click(function () {
+
+        let burger = $('.header_hamburger');
+
+        burger.toggleClass('header_hamburger_open');
+
+
+        if ($(this).is('.active:not(.back)')) {
+            $(this).addClass('back');
+        } else if ($(this).is('.back')) {
+            $(this).removeClass('back');
+        } else {
+            $(this).addClass('active');
+        }
+    });
+
+    ymaps.ready(init);
+});
+
+
+
+
+
 function init() {
     let myMap;
     let TwoLions;
@@ -39,34 +144,3 @@ function init() {
 
     myMap.geoObjects.add(TwoLions);
 }
-
-
-$(()=>{
-
-
-
-
-
-
-
-    //Кнопка бургер
-    $('.menu').click(function() {
-
-        let burger = $('.header_hamburger');
-
-        burger.toggleClass('header_hamburger_open');
-
-
-        if($(this).is('.active:not(.back)')) {
-            $(this).addClass('back');
-        } else if ($(this).is('.back')) {
-            $(this).removeClass('back');
-        } else {
-            $(this).addClass('active');
-        }
-    });
-});
-
-
-
-

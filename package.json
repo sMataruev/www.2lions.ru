@@ -37,7 +37,8 @@
     "slick-carousel": "^1.8.1",
     "smart-grid": "^2.1.1",
     "vinyl-ftp": "^0.6.1",
-    "waypoints": "^4.0.1"
+    "waypoints": "^4.0.1",
+    "wow.js": "^1.2.2"
   },
   "devDependencies": {
     "slimerjs": "^1.0.0"
