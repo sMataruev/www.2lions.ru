@@ -15,15 +15,36 @@
     <link rel="icon" href="../img/Icons/title_lion.png">
     <!-- подключение сss-->
     <!--link(rel="stylesheet", type="text/css"  href="../css/normalize.css")-->
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.6.2/animate.min.css">
     <link rel="stylesheet" type="text/css" href="../css/styles.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.6.2/animate.min.css">
     <title>2LIONS
     </title>
   </head>
 </html>
 <body>
   <!--.wrapper-->
+  <div class="window_call_wrap">
+    <div class="windows_call_main">
+      <button class="windows_call_main_cancel">Х</button>
+      <div class="windows_call_main_left_side">
+        <div class="windows_call_main_left_side__header_text">ЖДЕМ ВАС</div>
+        <div class="windows_call_main_left_side__adress_text">г. Донецк<br>пр-т Мира 17,<br>8 этаж, офис 86<br>с 9:00 до 18:00</div>
+        <div class="windows_call_main_left_side__phone">+38 (071) 111-11-11</div>
+      </div>
+      <div class="windows_call_main_right_side">
+        <h2 class="windows_call_main_right_side__header_text">НАПИСАТЬ СООБЩЕНИЕ</h2>
+        <form class="windows_call_main_right_side_form">
+          <input class="windows_call_main_right_side_form_elem__your_name" type="text" id="fnameid" name="fname" placeholder="Ваше имя" required="required">
+          <input class="windows_call_main_right_side_form_elem__your_phone" type="tel" name="ftel" placeholder="Ваш телефон" required="required">
+          <input class="windows_call_main_right_side_form_elem__your_email" type="email" name="femail" placeholder="Ваш email">
+          <input class="windows_call_main_right_side_form_elem__your_text" type="text" name="ftext" placeholder="Ваш текст">
+          <div class="windows_call_main_right_side_submit_block"><span class="windows_call_main_right_side_submit_block__our_email">или написать нам на email:<br>reklama@2lion.ru</span>
+            <button class="windows_call_main_right_side_submit_block__submit">ОТПРАВИТЬ</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
   <section class="nav_block">
     <div class="nav_block_menu">
       <ul class="nav_block_items">
@@ -114,18 +135,12 @@
           <h2 class="gallery_blocks__header_text"> ГАЛЕРЕЯ<span class="gallery_blocks__header_color">	 НАШИХ</span> РАБОТ</h2>
         </div>
         <div class="gallery_blocks_row2">
-          <div class="gallery_blocks_row2_inner_row">
-            <div class="gallery_block_lion"><img class="gallery_block__lion_img" src="http://placehold.it/599x300"></div>
-            <div class="gallery_block_journal"><img class="gallery_block__journal_img" src="http://placehold.it/599x300"></div>
-          </div>
-          <div class="gallery_blocks_row2_inner_row2">
-            <div class="gallery_block_box"><img class="gallery_block__box_img" src="http://placehold.it/299x250"><img class="gallery_block__box_img2" src="http://placehold.it/299x250"></div>
-            <div class="gallery_block_shirt"><img class="gallery_block__shirt_img" src="http://placehold.it/299x250"><img class="gallery_block__pack_img" src="http://placehold.it/299x250"></div>
-          </div>
+          <div class="gallery_block_lion"><img class="gallery_block_lion__lion_img" src="../img/Assets/lion.jpg"><a class="gallery_block_lion__link" href="#">ПОСМОТРЕТЬ РАБОТЫ</a></div>
         </div>
         <div class="gallery_blocks_row3">
           <h2 class="gallery_blocks__footer_text"><span class="gallery_blocks__footer_text--color">НАШИ</span>	УСЛУГИ</h2>
         </div>
+        <div class="scoreDIv"></div>
       </div>
     </section>
     <section class="printing">
@@ -333,8 +348,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/shortcuts/sticky.min.js"></script>
-  <script src="../js/animate_css.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"></script>
+  <script src="../js/izotope_v3.0.6.js"></script>
   <script src="../js/main.js"></script>
+  <script src="../js/animate_css.js"></script>
+  <script src="../js/slick.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 </body>

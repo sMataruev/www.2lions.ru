@@ -21,10 +21,13 @@ body {
 //layout setups
 @import "layout/setups";
 @import "layout/fonts";
+@import "layout/slick";
+@import "layout/slick-theme";
 
 //mixins
 @import "helpers/mixins";
 @import "blocks/**/*";
+
 
 
 

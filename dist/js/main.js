@@ -1,26 +1,44 @@
-
 ;
 $(() => {
 
 
 
-
-
+    //*******************************************************************************************
     //Обвертка для блока nav_block чтобы header не прыгал когда nav_block прилипает
     $('.nav_block').wrap("<div class='nav_block_placeholder'></div>");
     $('.nav_block_placeholder').height($('.nav_block').outerHeight());
     //конец обвертки
 
-
     //Прилипалка для блока nav_block
-    $('.nav_block').waypoint(()=>{
+     $('.nav_block').waypoint(() => {
         $('.nav_block').toggleClass('stuck');
     }, {
         offset: '-100'
     });
+    //Конецк Прилипалки для блока nav_block
 
-    //Анимации блок
-    $('.header_block__logo').animated('fadeIn');
+
+
+    //*******************************************************************************************
+    //блок для льва - галерея
+    let lionImg = $('.gallery_block_lion__lion_img');
+    let lionImgLink = $('.gallery_block_lion__link');
+    lionImg.mouseenter(() => {
+        lionImg.addClass('hoverClass');
+        lionImgLink.mouseenter(() => {
+            lionImg.addClass('hoverClass');
+        });
+    });
+    lionImg.mouseleave(() => {
+        lionImg.removeClass('hoverClass');
+    });
+    lionImgLink.animatedOffset('fadeInDown', 60);
+    //Конец блок для льва - галерея
+
+
+    //*******************************************************************************************
+    //Анимации блок для карточек
+        $('.header_block__logo').animated('fadeIn');
 
     $('.header_block__offer_text').animated('bounceInLeft');
     $('.header_block__under_text').animated('bounceInRight');
@@ -74,11 +92,54 @@ $(() => {
     $('.branding_cars').animated('fadeInUp');
 
 
+    $('.map_block_desc').animatedOffset('bounceInLeft', 90);
+    $('.map_block_map').animatedOffset('bounceInRight', 90);
+    $('.footer').animatedOffset('fadeInUp', 90);
+    // Конец Анимации блок для карточек
 
 
+    //*******************************************************************************************
+
+    //Window Call
+    let windowsCallWrap = $('.window_call_wrap');
+    let windowCall = $('.windows_call_main_cancel');
+    let windowCallMain = $('.windows_call_main');
+    let btnSubmit = $('.windows_call_main_right_side_submit_block__submit');
+
+    windowCall.on('click', (eve) => {
+        eve.preventDefault();
+        windowsCallWrap.css({
+            display: 'none'
+        });
+        clearTimeout(timer);
+    });
+    let timer = setInterval(showWindowCallWrap, 60000);
+
+    //Показывает Window Call чеерз время
+    function showWindowCallWrap() {
+        windowCallMain.animated('bounceInDown');
+        windowsCallWrap.animated('fadeIn');
+        windowsCallWrap.css({
+            display: 'block'
+        })
+    }
+
+    btnSubmit.on('click', (even) => {
+        even.preventDefault();
+        windowCallMain.animated('bounceOutUp');
+        windowsCallWrap.animated('fadeOut');
+        setTimeout(() => {
+            windowsCallWrap.css({
+                display: 'none'
+            })
+        }, 1000);
+
+        clearTimeout(timer);
+    });
+    //Конец Window Call
 
 
-
+    //*******************************************************************************************
 
     //Кнопка бургер
     $('.menu').click(function () {
@@ -96,12 +157,12 @@ $(() => {
             $(this).addClass('active');
         }
     });
+    //Конец кнопки бургер
 
+
+    //*******************************************************************************************
     ymaps.ready(init);
 });
-
-
-
 
 
 function init() {

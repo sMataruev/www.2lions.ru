@@ -1,84 +1,113 @@
 .gallery {
 }
+
 .gallery_blocks {
 
-
 }
-.gallery_blocks_row1{
+
+.gallery_blocks_row1 {
   display: flex;
   justify-content: flex-end;
   padding-right: 15%;
   height: 200px;
 
-  @include tablets{
+  @include tablets {
     justify-content: center;
     height: 100px;
     padding: 0;
   }
 
-  @include phones{
+  @include phones {
     justify-content: center;
     padding: 0;
   }
 
 }
+
 //заголовочный текст в секции
 .gallery_blocks__header_text {
   font-size: 4rem;
   color: #6e6e6e;
   align-self: center;
-  font-family: Bebas,sans-serif;
+  font-family: Bebas, sans-serif;
   font-weight: bold;
   transition: all 200ms ease-in-out;
   @include tablets {
     font-size: 3rem;
   }
 
-  @include phones{
+  @include phones {
     font-size: 2.3rem;
   }
 }
+
 //стилизация текста в секции заголовка
-.gallery_blocks__header_color{
+.gallery_blocks__header_color {
   color: #8f7e5f;
 }
+
 //блок с картинками
 .gallery_blocks_row2 {
   display: flex;
-  flex-direction: column;
-}
-.gallery_blocks_row2_inner_row {
-  display: flex;
+  justify-content: space-between;
+  align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
-}
-.gallery_block_lion{
-  width: 50%;
-  background-color: #d0ffff;
-}
-.gallery_block_journal{
-  width: 50%;
-  background-color: #d0ffff;
-
+  box-sizing: border-box;
 }
 
-.gallery_blocks_row2_inner_row2 {
+.gallery_block_lion {
+  width: 100%;
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-}
-.gallery_block__lion_img{
+  justify-content: center;
+  padding: 10px;
+  border: 2px solid #d8ab6c;
+  position: relative;
+  box-sizing: border-box;
+  &__lion_img {
+    width: 100%;
+    height: 100%;
+    filter: grayscale(20%);
+    transition: all 500ms ease-in-out;
 
+  }
+.hoverClass {
+  filter: grayscale(100%);
 }
-.gallery_block_box {
-  display: flex;
-  flex-wrap: wrap;
-  width: 50%;
-  background-color: #d0ffff;
+
+  &__link {
+    font-family: CenturyGothic, sans-serif;
+    width: 50%;
+    position: absolute;
+    display: block;
+    top: 33%;
+    left: 25%;
+    box-sizing: border-box;
+    padding: 70px 50px;
+    text-align: center;
+    //transform: translate(-10%, -10%);
+    background-color: rgba(0, 0, 0, 0.60);
+    font-size: 1.5rem;
+    color: #ffffff;
+    opacity: 1;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 300ms ease-in-out;
+    &:hover{
+      background-color: rgba(0, 0, 0, 0.70);
+    }
+
+    @include tablets {
+      padding: 50px 30px;
+      font-size: 1.3rem;
+    }
+    @include phones {
+      padding: 20px 10px;
+      font-size: 0.8rem;
+    }
+  }
 }
-.gallery_block_shirt{
-  @extend .gallery_block_box;
-}
+
 
 //Строка с текстом
 .gallery_blocks_row3 {
@@ -87,7 +116,7 @@
   padding-right: 15%;
   height: 200px;
 
-  @include tablets{
+  @include tablets {
     font-size: 3rem;
     justify-content: center;
     height: 100px;
@@ -99,23 +128,23 @@
 
   }
 }
-.gallery_blocks__footer_text{
+
+.gallery_blocks__footer_text {
   font-size: 4rem;
   color: #6e6e6e;
   align-self: center;
   font-family: Bebas, sans-serif;
   font-weight: bold;
   transition: all 200ms ease-in-out;
-  &--color{
+  &--color {
     color: #8f7e5f;
   }
 
   @include tablets {
     font-size: 3rem;
   }
-  @include phones{
+  @include phones {
     font-size: 2.3rem;
   }
 }
-
 

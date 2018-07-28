@@ -1,6 +1,4 @@
-//Animate CSS + WayPoints javaScript Plugin
-//Example: $(".element").animated("zoomInUp");
-//Author URL: http://webdesign-master.ru
+// $(".element").animated("zoomInUp");
 (()=> {
     $.fn.animated = function(inEffect) {
         $(this).each(()=> {
@@ -11,6 +9,23 @@
                 }
             }, {
                 offset: "90%"
+            });
+
+        });
+    };
+})(jQuery);
+
+// $(".element").animated("zoomInUp", "offset");
+(()=> {
+    $.fn.animatedOffset = function(inEffect,offset) {
+        $(this).each(()=> {
+            let ths = $(this);
+            ths.css("opacity", "0").addClass("animated").waypoint((dir)=> {
+                if (dir === "down") {
+                    ths.addClass(inEffect).css("opacity", "1");
+                }
+            }, {
+                offset: `${offset}%`
             });
 
         });
