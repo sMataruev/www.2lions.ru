@@ -43,12 +43,21 @@
 .nav_block_item {
   display: flex;
   align-self: center;
-  &__link {
+  &__link_main {
     height: 100%;
     text-decoration: none;
     display: block;
     color: black;
     min-width: 100px;
+  }
+  &__link_servives{
+    @extend .nav_block_item__link_main;
+  }
+  &__link_works{
+    @extend .nav_block_item__link_main;
+  }
+  &__link_about_us{
+    @extend .nav_block_item__link_main;
   }
 }
 .link--active:hover {

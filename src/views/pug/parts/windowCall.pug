@@ -1,6 +1,6 @@
 .window_call_wrap
 	.windows_call_main
-		button.windows_call_main_cancel Х
+		button.windows_call_main_cancel
 		.windows_call_main_left_side
 			.windows_call_main_left_side__header_text ЖДЕМ ВАС
 			.windows_call_main_left_side__adress_text
@@ -12,6 +12,11 @@
 				br
 				| с 9:00 до 18:00
 			.windows_call_main_left_side__phone +38 (071) 111-11-11
+			span.windows_call_main_left_side__our_email
+				| написать нам, email:
+				br
+				|
+				span.our_email--bold reklama@2lion.ru
 		.windows_call_main_right_side
 			h2.windows_call_main_right_side__header_text
 				| НАПИСАТЬ СООБЩЕНИЕ
@@ -21,8 +26,8 @@
 				input(type='email' name='femail' placeholder='Ваш email').windows_call_main_right_side_form_elem__your_email
 				input(type='text'  name='ftext'  placeholder='Ваш текст').windows_call_main_right_side_form_elem__your_text
 				.windows_call_main_right_side_submit_block
-					span.windows_call_main_right_side_submit_block__our_email
-						| или написать нам на email:
-						br
-						| reklama@2lion.ru
+					//span.windows_call_main_right_side_submit_block__our_email
+					//	| или написать нам на email:
+					//	br
+					//	| reklama@2lion.ru
 					button.windows_call_main_right_side_submit_block__submit ОТПРАВИТЬ

@@ -1,20 +1,49 @@
 ;
 $(() => {
 
+    //Прокрутка
+    //*******************************************************************************************
+    let navLinkAboutUs = $('.nav_block_items');
+    navLinkAboutUs.localScroll();
+
+
+
+
+    //NAV BLOCK
+    //*******************************************************************************************
+    let navBtn = $('.nav_block_contacts__btn');
+    navBtn.on('click', ()=>{
+        showWindowCallWrap();
+    });
+
+
 
 
     //*******************************************************************************************
     //Обвертка для блока nav_block чтобы header не прыгал когда nav_block прилипает
-    $('.nav_block').wrap("<div class='nav_block_placeholder'></div>");
+    $('.nav_block').wrap("<div class='nav_block_placeholder' id='main'></div>");
     $('.nav_block_placeholder').height($('.nav_block').outerHeight());
     //конец обвертки
 
-    //Прилипалка для блока nav_block
-     $('.nav_block').waypoint(() => {
-        $('.nav_block').toggleClass('stuck');
-    }, {
-        offset: '-100'
+    let win = $(window);
+
+    // Прилипалка для блока nav_block
+    win.on('scroll', ()=>{
+       let zeroPoint = win.scrollTop();
+        if (zeroPoint >= 100) {
+            $('.nav_block').addClass('stuck');
+        }
+        else {
+            $('.nav_block').removeClass('stuck');
+        }
+        // $('.nav_block').waypoint(() => {
+        //     $('.nav_block').addClass('stuck');
+        //
+        // }, {
+        //     offset: '-100'
+        // });
     });
+
     //Конецк Прилипалки для блока nav_block
 
 
@@ -34,6 +63,8 @@ $(() => {
     });
     lionImgLink.animatedOffset('fadeInDown', 60);
     //Конец блок для льва - галерея
+
+
 
 
     //*******************************************************************************************
@@ -98,8 +129,9 @@ $(() => {
     // Конец Анимации блок для карточек
 
 
-    //*******************************************************************************************
 
+
+    //*******************************************************************************************
     //Window Call
     let windowsCallWrap = $('.window_call_wrap');
     let windowCall = $('.windows_call_main_cancel');
@@ -113,7 +145,7 @@ $(() => {
         });
         clearTimeout(timer);
     });
-    let timer = setInterval(showWindowCallWrap, 60000);
+    let timer = setInterval(showWindowCallWrap, 120000);
 
     //Показывает Window Call чеерз время
     function showWindowCallWrap() {

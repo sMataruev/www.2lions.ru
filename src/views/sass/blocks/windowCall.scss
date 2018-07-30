@@ -19,7 +19,16 @@
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  background-color: #c5b865;
+  background-color: #e5a731;
+
+  @include ipad_pro {
+
+  }
+  @include phones {
+    width: 80%;
+    top: 25%;
+    left:10%;
+  }
 }
 
 .windows_call_main_cancel {
@@ -30,8 +39,14 @@
   height: 40px;
   color: white;
   border: none;
-  background-color: transparent;
+  background: transparent url('../img/Icons/cancel.png') no-repeat center center;
+  transition: all 100ms ease-in-out;
+  &:hover{
+    transform: rotate(90deg);
+    cursor: pointer;
+  }
 }
+
 
 .windows_call_main_left_side {
   width: 250px;
@@ -43,25 +58,73 @@
   align-items: center;
   &__header_text {
     position: relative;
-    bottom: 27px;
+    //bottom: 27px;
     font-family: CenturyGothic, sans-serif;
     color: #ffffff;
     font-size: 1.5rem;
 
+    @include ipad_pro {
+      font-size: 1.2rem;
+    }
+    @include phones{
+      font-size: 1rem;
+    }
   }
   &__adress_text {
     position: relative;
-    bottom: 27px;
+    //bottom: 27px;
     font-family: CenturyGothic, sans-serif;
     color: #ffffff;
     font-size: 0.9rem;
     line-height: 1.3rem;
+    @include ipad_pro {
+      font-size: 0.8rem;
+    }
+    @include phones{
+      font-size: 0.8rem;
+    }
   }
   &__phone {
     @extend .windows_call_main_left_side__adress_text;
   }
-}
+  &__our_email{
+    display: block;
+    font-size: 0.8rem;
+    font-family: "Century Gothic", sans-serif;
+    color: #fff;
 
+    @include ipad_pro {
+      font-size: 0.7rem;
+    }
+    @include phones{
+      font-size: 1rem;
+    }
+  }
+
+  @include ipad_pro {
+
+  }
+  @include phones{
+      display: none;
+  }
+}
+.windows_call_main_left_side__header_text{
+  @include ipad_pro {
+  }
+  @include phones{
+    right: 20px;
+  }
+}
+.our_email--bold{
+  font-weight: bold;
+  font-size: 1rem;
+  @include ipad_pro {
+    font-size: 0.9rem;
+  }
+  @include phones{
+    font-size: 0.7rem;
+  }
+}
 .windows_call_main_right_side {
   width: 400px;
   display: flex;
@@ -75,6 +138,12 @@
     align-self: center;
   }
 
+  @include ipad_pro {
+
+  }
+  @include phones{
+    width: 90%;
+  }
 }
 
 .windows_call_main_right_side_form {
@@ -118,9 +187,21 @@
       transform: translateX(0);
       transition: all 100ms ease-in-out;
     }
+    @include ipad_pro {
+      &::-webkit-input-placeholder {
+        transform: translateX(66%);
+        transition: all 100ms ease-in-out;
 
+      }
+    }
+    @include phones{
+    width: 100%;
+      &::-webkit-input-placeholder {
+        transform: translateX(70%);
+        transition: all 100ms ease-in-out;
+      }
+    }
   }
-
   &__your_phone[type='tel'] {
     width: 85%;
     outline: none;
@@ -149,6 +230,21 @@
     &:focus::-webkit-input-placeholder {
       transform: translateX(0);
       transition: all 100ms ease-in-out;
+    }
+    @include ipad_pro {
+      &::-webkit-input-placeholder {
+        transform: translateX(55%);
+        transition: all 100ms ease-in-out;
+
+      }
+    }
+    @include phones{
+      width: 100%;
+      &::-webkit-input-placeholder {
+        transform: translateX(60%);
+        transition: all 100ms ease-in-out;
+
+      }
     }
   }
   &__your_email[type='email'] {
@@ -180,6 +276,21 @@
       transform: translateX(0);
       transition: all 100ms ease-in-out;
     }
+    @include ipad_pro {
+      &::-webkit-input-placeholder {
+        transform: translateX(66%);
+        transition: all 100ms ease-in-out;
+
+      }
+    }
+    @include phones {
+      width: 100%;
+      &::-webkit-input-placeholder {
+        transform: translateX(70%);
+        transition: all 100ms ease-in-out;
+
+      }
+    }
   }
   &__your_text[type='text'] {
     width: 85%;
@@ -210,6 +321,21 @@
       transform: translateX(0);
       transition: all 100ms ease-in-out;
     }
+    @include ipad_pro {
+      &::-webkit-input-placeholder {
+        transform: translateX(67%);
+        transition: all 100ms ease-in-out;
+
+      }
+    }
+    @include phones{
+      width: 100%;
+      &::-webkit-input-placeholder {
+        transform: translateX(70%);
+        transition: all 100ms ease-in-out;
+
+      }
+    }
   }
 }
 
@@ -226,20 +352,34 @@
     color: #fff;
   }
   &__submit {
+    width:  85%;
     position: relative;
-    right: 15%;
+    //right: 15%;
     border: none;
     background-color: #ffffff;
-    color: #c19e53;
+    color: #d7872c;
     padding: 10px 20px;
     outline: #ffffff;
     box-shadow: 2px 3px 10px 0 rgba(110, 110, 110, 0.71);
     transition: all 200ms ease-in-out;
     &:hover {
-      background-color: #c19e53;
+      background-color: #d7872c;
       color: #fff;
       cursor: pointer;
     }
+
+    @include ipad_pro {
+      width: 100%;
+    }
+    @include phones{
+      width: 100%;
+
+    }
+  }
+  @include ipad_pro {
+    width: 85%;
+  }
+  @include phones{
   }
 
 }
