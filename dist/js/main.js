@@ -3,9 +3,10 @@ $(() => {
 
     //Прокрутка
     //*******************************************************************************************
-    let navLinkAboutUs = $('.nav_block_items');
-    navLinkAboutUs.localScroll();
-
+    let navLinks = $('.nav_block_items');
+    let navLinkBurger = $('.header_hamburger_items');
+    navLinks.localScroll();
+    navLinkBurger.localScroll();
 
 
 
