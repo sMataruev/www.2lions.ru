@@ -51,17 +51,17 @@ $(() => {
 
     //*******************************************************************************************
     //блок для льва - галерея
-    let lionImg = $('.gallery_block_lion__lion_img');
+    // let lionImg = $('.gallery_block_lion__lion_img');
     let lionImgLink = $('.gallery_block_lion__link');
-    lionImg.mouseenter(() => {
-        lionImg.addClass('hoverClass');
-        lionImgLink.mouseenter(() => {
-            lionImg.addClass('hoverClass');
-        });
-    });
-    lionImg.mouseleave(() => {
-        lionImg.removeClass('hoverClass');
-    });
+    // lionImg.mouseenter(() => {
+    //     lionImg.addClass('hoverClass');
+    //     lionImgLink.mouseenter(() => {
+    //         lionImg.addClass('hoverClass');
+    //     });
+    // });
+    // lionImg.mouseleave(() => {
+    //     lionImg.removeClass('hoverClass');
+    // });
     lionImgLink.animatedOffset('fadeInDown', 60);
     //Конец блок для льва - галерея
 
@@ -178,8 +178,17 @@ $(() => {
     $('.menu').click(function () {
 
         let burger = $('.header_hamburger');
-
+        let menu = $('.menu');
         burger.toggleClass('header_hamburger_open');
+
+        let AllLinks = $('.header_hamburger_item__link_main, .header_hamburger_item__link_servives, .header_hamburger_item__link_works, .header_hamburger_item__link_about_us');
+
+        AllLinks.on('click', ()=>{
+            setTimeout(()=>{
+                burger.removeClass('header_hamburger_open');
+                menu.removeClass('active');
+            }, 800)
+        });
 
 
         if ($(this).is('.active:not(.back)')) {

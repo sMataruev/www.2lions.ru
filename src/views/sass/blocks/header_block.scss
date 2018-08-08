@@ -17,11 +17,10 @@
   box-sizing: border-box;
   overflow: hidden;
   transition: height 200ms ease-in-out;
-  height: 100px;
+  height: 80px;
 
   @include tablets {
     display: block;
-
   }
 }
 
@@ -32,7 +31,7 @@
 }
 .header_hamburger_item {
   position: relative;
-  top: 37px;
+  top: 28px;
   margin-bottom: 35px;
   &__phone {
     color: #fff;
@@ -192,9 +191,9 @@ $delay: 0.05s;
 
 .menu {
   position: absolute;
-  top: 50px;
+  top: 40px;
   right: 0 ;
-  transform: translate(-50%, -50%);
+  transform: translate(-25%, -50%);
   overflow: hidden;
   padding: 10px;
   cursor: pointer;

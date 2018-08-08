@@ -178,6 +178,7 @@
       color: #f0f0f0;
       font-family: "Century Gothic", sans-serif;
     }
+
     &::-webkit-input-placeholder {
       transform: translateX(76%);
       transition: all 100ms ease-in-out;
@@ -360,26 +361,23 @@
     color: #d7872c;
     padding: 10px 20px;
     outline: #ffffff;
-    box-shadow: 2px 3px 10px 0 rgba(110, 110, 110, 0.71);
-    transition: all 200ms ease-in-out;
+    box-shadow: 1px 1px 1px 0 rgba(110, 110, 110, 0.71);
+    transition: all 100ms ease-in-out;
     &:hover {
       background-color: #d7872c;
       color: #fff;
       cursor: pointer;
     }
 
-    @include ipad_pro {
-      width: 100%;
-    }
     @include phones{
       width: 100%;
-
     }
   }
   @include ipad_pro {
     width: 85%;
   }
   @include phones{
+    width: 100%;
   }
 
 }
