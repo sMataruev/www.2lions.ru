@@ -216,6 +216,8 @@ $delay: 0.05s;
       transform: translateX(-120%);
       animation: slideBack $t $delay ease-out forwards;
     }
+
+
     &:after {
       transform: translateX(120%);
       animation: slideBack $t $delay ease-out forwards;
