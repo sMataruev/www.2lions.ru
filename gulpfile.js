@@ -76,7 +76,7 @@ var DIST_DIR = './dist/';
 
 var path = {
     sass: {
-        entry: SRC_DIR + 'views/sass/main.scss',
+        entry: SRC_DIR + 'views/sass/*.scss',
         src: SRC_DIR   + 'views/sass/**/*.scss',
         dist: DIST_DIR + 'css'
     },

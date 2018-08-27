@@ -1,0 +1,433 @@
+@import "../sass/layout/smart-grid";
+@include reset();
+.wrapper{
+  @include wrapper();
+}
+$white : #efeee9;
+$beige: #eeebdf;
+$main-font-color : #373e42;
+$gray: #c7c7c7;
+$green: #62bd72;
+$light-beige: #f4f1e5;
+
+body {
+  overflow-x: hidden;
+  //background-color: #f7f7f7;
+  //background-color: #E5E6F2;
+  //background-color: #EFEEF7;
+  //background-color: #f1f2ff;
+  background-color: #f7f8ff;
+}
+
+//layout setups
+@import "layout/setups";
+@import "layout/fonts";
+@import "layout/slick";
+@import "layout/slick-theme";
+
+//mixins
+@import "helpers/mixins";
+
+
+
+//**********************************************NAV_BLOCK
+.template_nav_block {
+  width: 100%;
+  height: 15vh;
+  display: flex;
+  align-self: center;
+  justify-content: space-between;
+  @include tablets {
+    display: none;
+  }
+}
+.template_nav_block_placeholder{
+
+  height: 15vh;
+
+  @include tablets{
+    display: none;
+  }
+  @include phones{
+    display: none;
+  }
+}
+.template_nav_block_menu {
+  margin-left: 20px;
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.template_nav_block_items {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  list-style: none;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  font-family: CenturyGothic, sans-serif;
+}
+.template_nav_block_item {
+  display: flex;
+  align-self: center;
+  &__link_main {
+    height: 100%;
+    text-decoration: none;
+    display: block;
+    color: #000000;
+    min-width: 100px;
+  }
+  &__link_servives{
+    @extend .template_nav_block_item__link_main;
+  }
+  &__link_works{
+    @extend .template_nav_block_item__link_main;
+  }
+  &__link_about_us{
+    @extend .template_nav_block_item__link_main;
+  }
+}
+.template_link--active:hover {
+  color: #c03b18;
+}
+//Правая часть навигации Родитель
+.template_nav_block_contacts {
+  //margin-left: auto;
+
+  //height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  //Правая часть навигации Номер телефона
+  &__phone {
+    margin-right: 25px;
+    align-self: center;
+    color: black;
+    font-size: 1.1rem;
+    display: block;
+    font-family: CenturyGothic,sans-serif;
+
+  }
+  //Правая часть навигации кнлпка
+  &__btn {
+    //margin-left: auto;
+    background-color: #e23e18;
+    border: 0;
+    padding: 0 20px;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 100ms ease-in-out;
+    font-family: CenturyGothic-Bold, sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.1rem;
+    &:hover {
+      background-color: #c03b18
+    }
+  }
+}
+.stuck {
+  transition: all 400ms ease-in-out;
+  height: 60px ;
+  background-color: #f7f8ff;
+  position: fixed;
+  z-index: 500;
+  opacity: 0.8;
+}
+
+
+
+
+
+//**********************************************HEADER_BLOCK
+
+
+.template_header {
+  display: flex;
+  position: relative;
+
+  @include tablets{
+    height: 100vh;
+  }
+}
+
+//слой меню в мобильной версии
+.template_header_hamburger {
+  display: none;
+  position: fixed;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 99;
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: height 200ms ease-in-out;
+  height: 80px;
+
+  @include tablets {
+    display: block;
+  }
+}
+
+.template_header_hamburger_items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.template_header_hamburger_item {
+  position: relative;
+  top: 28px;
+  margin-bottom: 35px;
+  &__phone {
+    color: #fff;
+    font-family: CenturyGothic, sans-serif;
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+    position: relative;
+    transition: all 400ms ease-in-out;
+    @include phones{
+      transform: translateX(-50px);
+    }
+  }
+
+  &__link_main {
+    color: #c5b865;
+    font-size: 1.4rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: CenturyGothic, sans-serif;
+
+
+    &:hover{
+      color: #fff;
+    }
+  }
+  &__link_servives{
+    @extend .template_header_hamburger_item__link_main;
+  }
+  &__link_works{
+    @extend .template_header_hamburger_item__link_main;
+  }
+  &__link_about_us{
+    @extend .template_header_hamburger_item__link_main;
+  }
+}
+
+//Когда нажата кнопка бургер
+.template_header_hamburger_open{
+  height: 100%;
+  transition: height 200ms ease-in-out;
+}
+
+.template_header_block {
+  background: black url(../img/Assets/HeaderBackground.jpg) no-repeat center bottom;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  //height: 600px;
+  overflow: hidden;
+  height: 60vh;
+  &__logo {
+    background: url("../img/Icons/template_lion_log2.svg") no-repeat center center;
+    //background-size: cover;
+    opacity: 1;
+    mix-blend-mode: overlay;
+    position: absolute;
+    top: -3%;
+    right: 150px;
+    width: 256px;
+    height: 340px;
+    transition: all 200ms ease-in-out;
+    @include ipad_pro{
+      transform: translateX(35%);
+    }
+    @include tablets {
+      top: 45%;
+      //border: 1px white solid;
+      right: 50%;
+      transform: translate(50%, -50%);
+      width: 400px;
+      height: 550px;
+      background: url("../img/Icons/lion_log_tablets.svg") no-repeat center center;
+    }
+    @include phones{
+      width: 220px;
+      height: 320px;
+      top: 50%;
+      right: 50%;
+      transform: translate(45%, -50%);
+      background: url("../img/Icons/lion_log_phones.svg") no-repeat center center;
+      //border: 1px red solid;
+    }
+  }
+
+  &__offer_text {
+    color: #ffffff;
+    font-size: 4rem;
+    font-weight: bold;
+    font-family: Intro-Bold-Alt,sans-serif;
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    line-height: 4.4rem;
+    transition: all 200ms ease-in-out;
+    @include ipad_pro{
+      font-size: 3rem;
+      transform: translateX(-20%);
+    }
+    @include tablets{
+      display: none;
+    }
+  }
+  &__under_text {
+    position: absolute;
+    bottom: 50%;
+    width: 600px;
+    height: 3px;
+    left: 15.3%;
+    background-color: white;
+    transition: all 200ms ease-in-out;
+    @include ipad_pro {
+      width: 450px;
+      transform: translateX(-15%);
+    }
+    @include tablets{
+      display: none;
+    }
+  }
+  &__text {
+    font-size: 2rem;
+    position: absolute;
+    bottom: 35%;
+    left: 15%;
+    color: #c5b865;
+    font-family: Code-PPro,sans-serif;
+    transition: all 200ms ease-in-out;
+    @include ipad_pro {
+      transform: translateX(-20%);
+      font-size: 2rem;
+      bottom: 20%;
+
+    }
+    @include tablets{
+      display: none;
+    }
+  }
+
+  @include phones{
+    height: 100vh;
+  }
+  @include tablets{
+    height: 100vh;
+  }
+}
+
+
+
+
+
+
+
+
+
+//Бургер кнопка
+$t: 0.2s;
+$delay: 0.05s;
+
+.template_menu {
+  position: absolute;
+  top: 40px;
+  right: 0 ;
+  transform: translate(-25%, -50%);
+  overflow: hidden;
+  padding: 10px;
+  cursor: pointer;
+  &.active {
+    &:before {
+      animation: slideLeft $t $delay ease-out forwards;
+    }
+    &:after {
+      animation: slideRight $t $delay ease-out forwards
+    }
+    .bar {
+      animation: rotate45 $t ease-out forwards;
+      &:last-child {
+        animation: rotate135 $t $t ease-out forwards
+      }
+    }
+  }
+  &.back {
+    &:before {
+      transform: translateX(-120%);
+      animation: slideBack $t $delay ease-out forwards;
+    }
+
+
+    &:after {
+      transform: translateX(120%);
+      animation: slideBack $t $delay ease-out forwards;
+    }
+    .bar {
+      transform: rotate(-45deg);
+      animation: rotateBack $t ease-out forwards;
+      &:last-child {
+        transform: rotate(-135deg);
+        animation: rotateBack $t $t ease-out forwards;
+      }
+    }
+  }
+  &:before {
+    content: '';
+    display: block;
+    width: 55px;
+    height: 2px;
+    background: #c5b865;
+  }
+  &:after {
+    content: '';
+    display: block;
+    width: 55px;
+    height: 2px;
+    background: #c5b865;
+  }
+  .bar {
+    display: block;
+    width: 55px;
+    height: 2px;
+    background: #c5b865;
+    margin: 14px 0;
+    &:last-child {
+      opacity: 0;
+      transform: rotate(-45deg);
+      position: absolute;
+      top: 13px;
+    }
+  }
+}
+
+@keyframes rotate135 {
+  from {
+    opacity: 1;
+    transform: rotate(-45deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(-135deg);
+  }
+}
+
+@keyframes rotate45 {to {transform: rotate(-45deg)}}
+@keyframes rotateBack {to {transform: rotate(0)}}
+@keyframes slideRight {to {transform: translateX(122%)}}
+@keyframes slideLeft {to {transform: translateX(-122%)}}
+@keyframes slideBack {to {transform: translateX(0)}}
+
+
+
+
+
+
+
+

@@ -136,6 +136,15 @@
     font-family: CenturyGothic, sans-serif;
     color: #ffffff;
     align-self: center;
+
+    @include ipad_pro {
+      font-size: 1.2rem;
+      align-self: self-start;
+    }
+    @include tablets{
+      font-size: 0.9rem;
+      align-self: self-start;
+    }
   }
 
   @include ipad_pro {
@@ -151,7 +160,6 @@
   flex-direction: column;
   justify-content: space-evenly;
   width: 100%;
-
 }
 
 .windows_call_main_right_side_form_elem {
@@ -179,29 +187,29 @@
       font-family: "Century Gothic", sans-serif;
     }
 
-    &::-webkit-input-placeholder {
-      transform: translateX(76%);
-      transition: all 100ms ease-in-out;
-
-    }
-    &:focus::-webkit-input-placeholder {
-      transform: translateX(0);
-      transition: all 100ms ease-in-out;
-    }
-    @include ipad_pro {
-      &::-webkit-input-placeholder {
-        transform: translateX(66%);
-        transition: all 100ms ease-in-out;
-
-      }
-    }
-    @include phones{
-    width: 100%;
-      &::-webkit-input-placeholder {
-        transform: translateX(70%);
-        transition: all 100ms ease-in-out;
-      }
-    }
+    //&::-webkit-input-placeholder {
+    //  transform: translateX(76%);
+    //  transition: all 100ms ease-in-out;
+    //
+    //}
+    //&:focus::-webkit-input-placeholder {
+    //  transform: translateX(0);
+    //  transition: all 100ms ease-in-out;
+    //}
+    //@include ipad_pro {
+    //  &::-webkit-input-placeholder {
+    //    transform: translateX(66%);
+    //    transition: all 100ms ease-in-out;
+    //
+    //  }
+    //}
+    //@include phones{
+    //width: 100%;
+    //  &::-webkit-input-placeholder {
+    //    transform: translateX(70%);
+    //    transition: all 100ms ease-in-out;
+    //  }
+    //}
   }
   &__your_phone[type='tel'] {
     width: 85%;
@@ -223,30 +231,30 @@
       color: #f0f0f0;
       font-family: "Century Gothic", sans-serif;
     }
-    &::-webkit-input-placeholder {
-      transform: translateX(68%);
-      transition: all 100ms ease-in-out;
-
-    }
-    &:focus::-webkit-input-placeholder {
-      transform: translateX(0);
-      transition: all 100ms ease-in-out;
-    }
-    @include ipad_pro {
-      &::-webkit-input-placeholder {
-        transform: translateX(55%);
-        transition: all 100ms ease-in-out;
-
-      }
-    }
-    @include phones{
-      width: 100%;
-      &::-webkit-input-placeholder {
-        transform: translateX(60%);
-        transition: all 100ms ease-in-out;
-
-      }
-    }
+    //&::-webkit-input-placeholder {
+    //  transform: translateX(68%);
+    //  transition: all 100ms ease-in-out;
+    //
+    //}
+    //&:focus::-webkit-input-placeholder {
+    //  transform: translateX(0);
+    //  transition: all 100ms ease-in-out;
+    //}
+    //@include ipad_pro {
+    //  &::-webkit-input-placeholder {
+    //    transform: translateX(55%);
+    //    transition: all 100ms ease-in-out;
+    //
+    //  }
+    //}
+    //@include phones{
+    //  width: 100%;
+    //  &::-webkit-input-placeholder {
+    //    transform: translateX(60%);
+    //    transition: all 100ms ease-in-out;
+    //
+    //  }
+    //}
   }
   &__your_email[type='email'] {
     width: 85%;
@@ -268,30 +276,30 @@
       color: #f0f0f0;
       font-family: "Century Gothic", sans-serif;
     }
-    &::-webkit-input-placeholder {
-      transform: translateX(76%);
-      transition: all 100ms ease-in-out;
-
-    }
-    &:focus::-webkit-input-placeholder {
-      transform: translateX(0);
-      transition: all 100ms ease-in-out;
-    }
-    @include ipad_pro {
-      &::-webkit-input-placeholder {
-        transform: translateX(66%);
-        transition: all 100ms ease-in-out;
-
-      }
-    }
-    @include phones {
-      width: 100%;
-      &::-webkit-input-placeholder {
-        transform: translateX(70%);
-        transition: all 100ms ease-in-out;
-
-      }
-    }
+    //&::-webkit-input-placeholder {
+    //  transform: translateX(76%);
+    //  transition: all 100ms ease-in-out;
+    //
+    //}
+    //&:focus::-webkit-input-placeholder {
+    //  transform: translateX(0);
+    //  transition: all 100ms ease-in-out;
+    //}
+    //@include ipad_pro {
+    //  &::-webkit-input-placeholder {
+    //    transform: translateX(66%);
+    //    transition: all 100ms ease-in-out;
+    //
+    //  }
+    //}
+    //@include phones {
+    //  width: 100%;
+    //  &::-webkit-input-placeholder {
+    //    transform: translateX(70%);
+    //    transition: all 100ms ease-in-out;
+    //
+    //  }
+    //}
   }
   &__your_text[type='text'] {
     width: 85%;
@@ -313,30 +321,30 @@
       color: #f0f0f0;
       font-family: "Century Gothic", sans-serif;
     }
-    &::-webkit-input-placeholder {
-      transform: translateX(76%);
-      transition: all 100ms ease-in-out;
-
-    }
-    &:focus::-webkit-input-placeholder {
-      transform: translateX(0);
-      transition: all 100ms ease-in-out;
-    }
-    @include ipad_pro {
-      &::-webkit-input-placeholder {
-        transform: translateX(67%);
-        transition: all 100ms ease-in-out;
-
-      }
-    }
-    @include phones{
-      width: 100%;
-      &::-webkit-input-placeholder {
-        transform: translateX(70%);
-        transition: all 100ms ease-in-out;
-
-      }
-    }
+    //&::-webkit-input-placeholder {
+    //  transform: translateX(76%);
+    //  transition: all 100ms ease-in-out;
+    //
+    //}
+    //&:focus::-webkit-input-placeholder {
+    //  transform: translateX(0);
+    //  transition: all 100ms ease-in-out;
+    //}
+    //@include ipad_pro {
+    //  &::-webkit-input-placeholder {
+    //    transform: translateX(67%);
+    //    transition: all 100ms ease-in-out;
+    //
+    //  }
+    //}
+    //@include phones{
+    //  width: 100%;
+    //  &::-webkit-input-placeholder {
+    //    transform: translateX(70%);
+    //    transition: all 100ms ease-in-out;
+    //
+    //  }
+    //}
   }
 }
 

@@ -10,6 +10,8 @@ $gray: #c7c7c7;
 $green: #62bd72;
 $light-beige: #f4f1e5;
 
+
+
 body {
   overflow-x: hidden;
   //background-color: #f7f7f7;
@@ -27,9 +29,3 @@ body {
 //mixins
 @import "helpers/mixins";
 @import "blocks/**/*";
-
-
-
-
-
-

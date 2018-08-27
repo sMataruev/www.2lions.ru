@@ -1,0 +1,219 @@
+doctype html
+html(lang='ru')
+	head
+		// Пути для css, js и изображений
+		- path = {css: 'dist/css', js: 'dist/js', img: 'dist/img'};
+		// блок с meta
+		meta(charset="UTF-8")
+		meta(name="description", content="")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1")
+		meta(property="og:image", content="dist/css/image.jpg")
+		// цвет в мобильной версии
+		meta(name="theme-color" content="#000")
+		meta(name="msapplication-navbutton-color" content="#000")
+		meta(name="apple-mobile-web-app-status-bar-style" content="#000")
+		link(rel='icon' href='../img/Icons/title_lion.png')
+		// подключение сss
+		//link(rel="stylesheet", type="text/css"  href="../css/normalize.css")
+		link(rel="stylesheet", type="text/css"  href="../css/template_style.css")
+		link(rel="stylesheet", type="text/css"  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.6.2/animate.min.css")
+		title template
+
+body
+	block content
+		section.template_nav_block
+			.template_nav_block_menu
+				ul.template_nav_block_items
+					li.template_nav_block_item
+						a(href='#main').template_nav_block_item__link_main.template_link--active ГЛАВНАЯ
+					li.template_nav_block_item
+						a(href='#services').template_nav_block_item__link_servives.template_link--active УСЛУГИ
+					li.template_nav_block_item
+						a(href='#works').template_nav_block_item__link_works.template_link--active РАБОТЫ
+					li.template_nav_block_item
+						a(href='#aboutUs').template_nav_block_item__link_about_us.template_link--active О НАС
+			.template_nav_block_contacts
+				.template_nav_block_contacts__phone +38 050 971 99 53
+				button.template_nav_block_contacts__btn СВЯЗАТЬСЯ С НАМИ
+
+
+
+
+
+
+
+
+
+
+
+		section.template_header
+			.template_header_hamburger
+				.template_menu
+					span.bar
+					span.bar
+				ul.template_header_hamburger_items
+					li.template_header_hamburger_item
+						.template_header_hamburger_item__phone +38 050 971 99 53
+					li.template_header_hamburger_item
+						a(href='#').template_header_hamburger_item__link_main ГЛАВНАЯ
+					li.template_header_hamburger_item
+						a(href='#').template_header_hamburger_item__link_servives УСЛУГИ
+					li.template_header_hamburger_item
+						a(href='#').template_header_hamburger_item__link_works РАБОТЫ
+					li.template_header_hamburger_item
+						a(href='#').template_header_hamburger_item__link_about_us О НАС
+			header.template_header_block
+				.template_header_block__logo
+				h1.template_header_block__offer_text БРЕНДИНГ
+				.template_header_block__under_text
+				p.template_header_block__text
+					| БРЕНДИРОВАНИЕ АВТОМОБИЛЯ
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		section.template_content
+		section.map
+			.map_row
+				.map_block_desc
+					.map_block_desc_adress
+						img(src='../img/Icons/placeholder.svg').map_block_desc_adress__adress_icon
+						.map_block_desc_adress_col2
+							h3.map_block_desc_adress__adress_text АДРЕС
+							p.map_block_desc_adress__adress_desc пр-т Мира 17,
+								br
+								|    8 этаж офис 86
+					.map_block_call_adress
+						img(src='../img/Icons/phone.svg').map_block_call_adress__adress_icon
+						.map_block_call_adress_col2
+							h3.map_block_call_adress__adress_text ЗВОНИТЕ НАМ
+							p.map_block_call_adress__adress_desc
+								| +38 (071) 348 00 95
+								br
+								| +38 (071) 348 00 96
+								br
+								| +38 (050) 177 80 65
+								br
+								| +38 (062) 343 33 77
+					.map_block_email
+						img(src='../img/Icons/message.svg').map_block_email__adress_icon
+						.map_block_email_col2
+							h3.map_block_email__adress_text EMAIL
+							p.map_block_email__adress_desc reklama@2lion.ru
+				.map_block_map
+					.map_block_map__yandex_map(id="myMap")
+		section.footer
+			.socials_block
+				.socials_block__line
+				ul.socials_block_items
+					li.socials_block_item
+						a(href='#').socials_block_item_link
+							img(src='../img/Icons/vkontakte.svg').socials_block_item_link__vk
+					li.socials_block_item
+						a(href='#').socials_block_item_link
+							img(src='../img/Icons/instagram.svg').socials_block_item_link__insta
+			.content_footer_block
+				.content_footer_block_col1
+					ul.content_footer_block_col1_items
+						li.content_footer_block_col1_item
+							a(href='#').content_footer_block_col1_item__about_us О НАС
+						li.content_footer_block_col1_item
+							a(href='#').content_footer_block_col1_item__gallary ГАЛЕРЕЯ
+						li.content_footer_block_col1_item
+							a(href='#').content_footer_block_col1_item__contacts КОНТАКТЫ
+				.content_footer_block_printing
+					ul.content_footer_block_printing_items
+						li.content_footer_block_printing_item
+							a(href='#').content_footer_block_printing_item__printing ПОЛИГРАФИЯ
+						li.content_footer_block_printing_item
+							a(href='#').content_footer_block_printing_item__bcard Визитки
+						li.content_footer_block_printing_item
+							a(href='#').content_footer_block_printing_item__flyer Флаеры
+						li.content_footer_block_printing_item
+							a(href='#').content_footer_block_printing_item__calendar Календари
+						li.content_footer_block_printing_item
+							a(href='#').content_footer_block_printing_item__newspapers Газеты
+						li.content_footer_block_printing_item
+							a(href='#').content_footer_block_printing_item__poster Афиши, плакаты
+						li.content_footer_block_printing_item
+							a(href='#').content_footer_block_printing_item__stationary Канцелярия
+						li.content_footer_block_printing_item
+							a(href='#').content_footer_block_printing_item__menu Меню, ценники
+						li.content_footer_block_printing_item
+							a(href='#').content_footer_block_printing_item__stickers Наклейки
+				.content_footer_block_advert
+					ul.content_footer_block_advert_items
+						li.content_footer_block_advert_item
+							a(href='#').content_footer_block_advert_item__advertising РЕКЛАМА
+						li.content_footer_block_advert_item
+							a(href='#').content_footer_block_advert_item__boards Наружная
+						li.content_footer_block_advert_item
+							a(href='#').content_footer_block_advert_item__audio_video Аудио и видео
+						li.content_footer_block_advert_item
+							a(href='#').content_footer_block_advert_item__promo Промо-акции
+						li.content_footer_block_advert_item
+							a(href='#').content_footer_block_advert_item__events Выставки
+				.content_footer_block_branding
+					ul.content_footer_block_branding_items
+						li.content_footer_block_branding_item
+							a(href='#').content_footer_block_branding_item__branding БРЕНДИНГ
+						li.content_footer_block_branding_item
+							a(href='#').content_footer_block_branding_item__logo_dev Разработка логотипа
+						li.content_footer_block_branding_item
+							a(href='#').content_footer_block_branding_item__style Фирменный стиль
+						li.content_footer_block_branding_item
+							a(href='#').content_footer_block_branding_item__presentation Презентации
+						li.content_footer_block_branding_item
+							a(href='#').content_footer_block_branding_item__packing Упаковка
+						li.content_footer_block_branding_item
+							a(href='#').content_footer_block_branding_item__clothing Одежда
+						li.content_footer_block_branding_item
+							a(href='#').content_footer_block_branding_item__braiding_car Брендирование авто
+						li.content_footer_block_branding_item
+							a(href='#').content_footer_block_branding_item__flags Атрибутика
+						li.content_footer_block_branding_item
+							a(href='#').content_footer_block_branding_item__prizes Награды, сувениры
+				.content_footer_block_inet
+					ul.content_footer_block_inet_items
+						li.content_footer_block_inet_item
+							a(href='#').content_footer_block_inet_item__services ИНТЕРНЕТ УСЛУГИ
+						li.content_footer_block_inet_item
+							a(href='#').content_footer_block_inet_item__app_dev Разработка сайтов
+								br
+								| и приложений
+						li.content_footer_block_inet_item
+							a(href='#').content_footer_block_inet_item__content_creation Создание контента
+						li.content_footer_block_inet_item
+							a(href='#').content_footer_block_inet_item__call_center Организация call-center
+			.copyrights_block
+				.copyrights_block_line
+				p.copyrights_block__copyright &copy; 2018 All rights reserved.
+					br
+					| Carefully designed and coded by Bro & Bro
+
+
+
+
+
+
+	script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+	script(src='https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js')
+	script(src='https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/shortcuts/sticky.min.js')
+	script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js')
+	script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery-localScroll/2.0.0/jquery.localScroll.min.js')
+	script(src='../js/izotope_v3.0.6.js')
+	script(src='../js/animate_css.js')
+	script(src='../js/slick.js')
+	script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+	script(src='../js/main.js')

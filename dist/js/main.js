@@ -9,15 +9,12 @@ $(() => {
     navLinkBurger.localScroll();
 
 
-
     //NAV BLOCK
     //*******************************************************************************************
     let navBtn = $('.nav_block_contacts__btn');
-    navBtn.on('click', ()=>{
+    navBtn.on('click', () => {
         showWindowCallWrap();
     });
-
-
 
 
     //*******************************************************************************************
@@ -29,8 +26,8 @@ $(() => {
     let win = $(window);
 
     // Прилипалка для блока nav_block
-    win.on('scroll', ()=>{
-       let zeroPoint = win.scrollTop();
+    win.on('scroll', () => {
+        let zeroPoint = win.scrollTop();
         if (zeroPoint >= 100) {
             $('.nav_block').addClass('stuck');
         }
@@ -46,7 +43,6 @@ $(() => {
     });
 
     //Конецк Прилипалки для блока nav_block
-
 
 
     //*******************************************************************************************
@@ -66,11 +62,9 @@ $(() => {
     //Конец блок для льва - галерея
 
 
-
-
     //*******************************************************************************************
     //Анимации блок для карточек
-        $('.header_block__logo').animated('fadeIn');
+    $('.header_block__logo').animated('fadeIn');
 
     $('.header_block__offer_text').animated('bounceInLeft');
     $('.header_block__under_text').animated('bounceInRight');
@@ -130,8 +124,6 @@ $(() => {
     // Конец Анимации блок для карточек
 
 
-
-
     //*******************************************************************************************
     //Window Call
     let windowsCallWrap = $('.window_call_wrap');
@@ -146,6 +138,7 @@ $(() => {
         });
         clearTimeout(timer);
     });
+
     let timer = setInterval(showWindowCallWrap, 120000);
 
     //Показывает Window Call чеерз время
@@ -183,8 +176,8 @@ $(() => {
 
         let AllLinks = $('.header_hamburger_item__link_main, .header_hamburger_item__link_servives, .header_hamburger_item__link_works, .header_hamburger_item__link_about_us');
 
-        AllLinks.on('click', ()=>{
-            setTimeout(()=>{
+        AllLinks.on('click', () => {
+            setTimeout(() => {
                 burger.removeClass('header_hamburger_open');
                 menu.removeClass('active');
             }, 800)
@@ -204,6 +197,120 @@ $(() => {
 
     //*******************************************************************************************
     ymaps.ready(init);
+
+
+    // ************************************************************TEMPLATE
+
+
+    $('.template_menu').click(function () {
+
+        let burger = $('.template_header_hamburger');
+        let menu = $('.template_menu');
+        burger.toggleClass('header_hamburger_open');
+
+        let AllLinks = $('.template_header_hamburger_item__link_main, .template_header_hamburger_item__link_servives, .template_header_hamburger_item__link_works, .template_header_hamburger_item__link_about_us');
+
+        AllLinks.on('click', ()=>{
+            setTimeout(()=>{
+                burger.removeClass('template_header_hamburger_open');
+                menu.removeClass('active');
+            }, 800)
+        });
+
+
+        if ($(this).is('.active:not(.back)')) {
+            $(this).addClass('back');
+        } else if ($(this).is('.back')) {
+            $(this).removeClass('back');
+        } else {
+            $(this).addClass('active');
+        }
+    });
+
+
+
+    //Прокрутка
+    //*******************************************************************************************
+    let temp_navLinks = $('.template_nav_block_items');
+    let temp_navLinkBurger = $('.template_header_hamburger_items');
+    temp_navLinks.localScroll();
+    temp_navLinkBurger.localScroll();
+
+
+    //NAV BLOCK
+    //*******************************************************************************************
+    let temp_navBtn = $('.template_nav_block_contacts__btn');
+    temp_navBtn.on('click', () => {
+        showWindowCallWrap();
+    });
+
+
+    //*******************************************************************************************
+    //Обвертка для блока nav_block чтобы header не прыгал когда nav_block прилипает
+    $('.template_nav_block').wrap("<div class='template_nav_block_placeholder' id='main'></div>");
+    $('.template_nav_block_placeholder').height($('.template_nav_block').outerHeight());
+    //конец обвертки
+
+    let temp_win = $(window);
+
+    // Прилипалка для блока nav_block
+    temp_win.on('scroll', () => {
+        let temp_zeroPoint = temp_win.scrollTop();
+        if (temp_zeroPoint >= 100) {
+            $('.template_nav_block').addClass('stuck');
+        }
+        else {
+            $('.template_nav_block').removeClass('stuck');
+        }
+        // $('.nav_block').waypoint(() => {
+        //     $('.nav_block').addClass('stuck');
+        //
+        // }, {
+        //     offset: '-100'
+        // });
+    });
+
+    //Конецк Прилипалки для блока nav_block
+
+    //Кнопка бургер
+    $('.template_menu').click(function () {
+
+        let burger = $('.template_header_hamburger');
+        let menu = $('.template_menu');
+        burger.toggleClass('template_header_hamburger_open');
+
+        let AllLinks = $('.template_header_hamburger_item__link_main, .template_header_hamburger_item__link_servives, .template_header_hamburger_item__link_works, .template_header_hamburger_item__link_about_us');
+
+        AllLinks.on('click', () => {
+            setTimeout(() => {
+                burger.removeClass('header_hamburger_open');
+                menu.removeClass('active');
+            }, 800)
+        });
+
+
+        if ($(this).is('.active:not(.back)')) {
+            $(this).addClass('back');
+        } else if ($(this).is('.back')) {
+            $(this).removeClass('back');
+        } else {
+            $(this).addClass('active');
+        }
+    });
+    //Конец кнопки бургер
+
+
+
+
+
+
+
+
+
+
+
+
+
 });
 
 
@@ -213,7 +320,7 @@ function init() {
     let myPin;
     let myStyleMap;
     myMap = new ymaps.Map("myMap", {
-        center: [48.0170, 37.8113],
+        center: [48.0162,37.7970],
         zoom: 17,
         controls: []
     });
@@ -232,10 +339,10 @@ function init() {
         </div>`;
 
 
-    TwoLions = new ymaps.Placemark([48.0170, 37.8113], {
+    TwoLions = new ymaps.Placemark([48.0165,37.7969], {
             balloonContentHeader: myStyleMap,
             balloonContentBody: '<span class="mapBody">Мы делаем качественную рекламу для Вас</span>',
-            balloonContentFooter: '<span class="mapBodyTel">+38 (071) 111 11 11 <br> +38 (071) 111 11 11 </span>',
+            balloonContentFooter: '<span class="mapBodyTel">+38 (071) 348 00 95 <br> +38 (071) 348 00 96 </span>',
             hintContent: ''
         },
         {
@@ -247,3 +354,4 @@ function init() {
 
     myMap.geoObjects.add(TwoLions);
 }
+
