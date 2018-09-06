@@ -21,13 +21,39 @@
   </head>
 </html>
 <body>
+  <div class="window_call_wrap">
+    <div class="windows_call_main">
+      <button class="windows_call_main_cancel"></button>
+      <div class="windows_call_main_left_side">
+        <div class="windows_call_main_left_side__header_text">ЖДЕМ ВАС</div>
+        <div class="windows_call_main_left_side__adress_text">г. Донецк<br>ул. Щорса 47а,<br> офис 105<br>с 9:00 до 18:00</div>
+        <div class="windows_call_main_left_side__phone">+38 (071) 348 00 96</div><span class="windows_call_main_left_side__our_email">написать нам, email:<br><span class="our_email--bold">reklama@2lion.ru</span></span>
+      </div>
+      <div class="windows_call_main_right_side">
+        <h2 class="windows_call_main_right_side__header_text">НАПИСАТЬ СООБЩЕНИЕ</h2>
+        <form class="windows_call_main_right_side_form">
+          <input class="windows_call_main_right_side_form_elem__your_name" type="text" id="fnameid" name="fname" placeholder="ФИО" required="required">
+          <input class="windows_call_main_right_side_form_elem__your_phone" type="tel" name="ftel" placeholder="+38 (050) 111 11 11 " required="required">
+          <input class="windows_call_main_right_side_form_elem__your_email" type="email" name="femail" placeholder="Ivanov@gmail.com">
+          <input class="windows_call_main_right_side_form_elem__your_text" type="text" name="ftext" placeholder="Ваш текст">
+          <div class="windows_call_main_right_side_submit_block">
+            <!--span.windows_call_main_right_side_submit_block__our_email-->
+            <!--	| или написать нам на email:-->
+            <!--	br-->
+            <!--	| reklama@2lion.ru-->
+            <button class="windows_call_main_right_side_submit_block__submit">ОТПРАВИТЬ</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
   <section class="template_nav_block">
     <div class="template_nav_block_menu">
       <ul class="template_nav_block_items">
-        <li class="template_nav_block_item"><a class="template_nav_block_item__link_main template_link--active" href="#main">ГЛАВНАЯ</a></li>
-        <li class="template_nav_block_item"><a class="template_nav_block_item__link_servives template_link--active" href="#services">УСЛУГИ</a></li>
-        <li class="template_nav_block_item"><a class="template_nav_block_item__link_works template_link--active" href="#works">РАБОТЫ</a></li>
-        <li class="template_nav_block_item"><a class="template_nav_block_item__link_about_us template_link--active" href="#aboutUs">О НАС</a></li>
+        <li class="template_nav_block_item"><a class="template_nav_block_item__link_main template_link--active" href="./index.html">НАЗАД</a></li>
+        <li class="template_nav_block_item"><a class="template_nav_block_item__link_servives template_link--active" href="#temp_services">УСЛУГИ</a></li>
+        <li class="template_nav_block_item"><a class="template_nav_block_item__link_works template_link--active" href="#temp_advantage">ПРЕИМУЩЕСТВА</a></li>
+        <li class="template_nav_block_item"><a class="template_nav_block_item__link_about_us template_link--active" href="#the_main">ГЛАВНОЕ</a></li>
       </ul>
     </div>
     <div class="template_nav_block_contacts">
@@ -42,10 +68,10 @@
         <li class="template_header_hamburger_item">
           <div class="template_header_hamburger_item__phone">+38 050 971 99 53</div>
         </li>
-        <li class="template_header_hamburger_item"><a class="template_header_hamburger_item__link_main" href="#">ГЛАВНАЯ</a></li>
-        <li class="template_header_hamburger_item"><a class="template_header_hamburger_item__link_servives" href="#">УСЛУГИ</a></li>
-        <li class="template_header_hamburger_item"><a class="template_header_hamburger_item__link_works" href="#">РАБОТЫ</a></li>
-        <li class="template_header_hamburger_item"><a class="template_header_hamburger_item__link_about_us" href="#">О НАС</a></li>
+        <li class="template_header_hamburger_item"><a class="template_header_hamburger_item__link_main" href="index.html">НАЗАД</a></li>
+        <li class="template_header_hamburger_item"><a class="template_header_hamburger_item__link_servives" href="#temp_services">УСЛУГИ</a></li>
+        <li class="template_header_hamburger_item"><a class="template_header_hamburger_item__link_works" href="#temp_advantage">ПРЕИМУЩЕСТВА</a></li>
+        <li class="template_header_hamburger_item"><a class="template_header_hamburger_item__link_about_us" href="#the_main">ГЛАВНОЕ</a></li>
       </ul>
     </div>
     <header class="template_header_block">
@@ -55,33 +81,99 @@
       <p class="template_header_block__text">БРЕНДИРОВАНИЕ АВТОМОБИЛЯ</p>
     </header>
   </section>
-  <section class="template_content"></section>
-  <section class="map">
-    <div class="map_row">
-      <div class="map_block_desc">
-        <div class="map_block_desc_adress"><img class="map_block_desc_adress__adress_icon" src="../img/Icons/placeholder.svg">
-          <div class="map_block_desc_adress_col2">
-            <h3 class="map_block_desc_adress__adress_text">АДРЕС</h3>
-            <p class="map_block_desc_adress__adress_desc">пр-т Мира 17,<br>   8 этаж офис 86</p>
-          </div>
-        </div>
-        <div class="map_block_call_adress"><img class="map_block_call_adress__adress_icon" src="../img/Icons/phone.svg">
-          <div class="map_block_call_adress_col2">
-            <h3 class="map_block_call_adress__adress_text">ЗВОНИТЕ НАМ</h3>
-            <p class="map_block_call_adress__adress_desc">+38 (071) 348 00 95<br>+38 (071) 348 00 96<br>+38 (050) 177 80 65<br>+38 (062) 343 33 77</p>
-          </div>
-        </div>
-        <div class="map_block_email"><img class="map_block_email__adress_icon" src="../img/Icons/message.svg">
-          <div class="map_block_email_col2">
-            <h3 class="map_block_email__adress_text">EMAIL</h3>
-            <p class="map_block_email__adress_desc">reklama@2lion.ru</p>
+  <section class="wrapper">
+    <section class="template_services" id="temp_services">
+      <div class="template_services_row_one">
+        <h2 class="template_services_row_one__header_text">НАЗВАНИЕ УСЛУГИ</h2>
+      </div>
+      <div class="template_services_row_two">
+        <div class="template_services_row_two__border"></div>
+        <div class="template_services_row_two_media_content">
+          <div class="template_services_row_two_media_content_img"><img class="template_services_row_two_media_content_img__logo" src="../img/Icons/Services/Auto-Branding.png"></div>
+          <div class="template_services_row_two_text_content">
+            <p class="template_services_row_two_text_content__content_text_one">Брендирование автомобилей – это рекламно-информационноя или эксклюзивное оформление автомобилей высококачественной виниловой пленкой или другими высококачественными материалами</p>
+            <p class="template_services_row_two_text_content__content_text_one">Использование такого вида оформления автотранспортных средств является частью динамичной рекламной компании, которую заметят огромное количество потенциальных покупателей.</p>
+            <p class="template_services_row_two_text_content__content_text_one">Два Льва предлагает создание и оформление легковых и грузовых автомобиля любой сложности.</p>
+            <p class="template_services_row_two_text_content__content_text_one">Брендированные авто заметно выделяются, привлекают к себе внимание, поэтому использование такого вида рекламы значительно увеличивает доход предприятия, а также позволяет сделать бренд узнаваемым</p>
           </div>
         </div>
       </div>
-      <div class="map_block_map">
-        <div class="map_block_map__yandex_map" id="myMap"></div>
+    </section>
+    <section class="template_advantages" id="temp_advantage">
+      <div class="template_advantages_row_one">
+        <h2 class="template_advantages_row_one__header_text">ПРЕИМУЩЕСТВА</h2>
       </div>
-    </div>
+      <div class="template_advantages_row_two">
+        <div class="template_advantages_row_two__border"></div>
+        <div class="template_advantages_row_two_content">
+          <ul class="template_advantages_row_two_content_items">
+            <li class="template_advantages_row_two_content_items__item">брендированные автомобили выделяются из обще массы автотранспортных средств</li>
+            <li class="template_advantages_row_two_content_items__item">брендированные автомобили выделяются из обще массы автотранспортных средств</li>
+            <li class="template_advantages_row_two_content_items__item">брендированные автомобили выделяются из обще массы автотранспортных средств</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="template_the_main" id="the_main">
+      <div class="template_the_main_row_one">
+        <h2 class="template_the_main_row_one__header_text">ГЛАВНОЕ</h2>
+      </div>
+      <div class="template_the_main_row_two">
+        <div class="template_the_main_row_two__border"></div>
+        <div class="template_the_main_row_two_content">
+          <ul class="template_the_main_row_two_content_items">
+            <li class="template_the_main_row_two_content_items__item">брендированные автомобили выделяются из обще массы автотранспортных средств</li>
+            <li class="template_the_main_row_two_content_items__item">брендированные автомобили выделяются из обще массы автотранспортных средств</li>
+            <li class="template_the_main_row_two_content_items__item">брендированные автомобили выделяются из обще массы автотранспортных средств</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="map">
+      <div class="map_row">
+        <div class="map_block_desc">
+          <div class="map_block_desc_adress"><img class="map_block_desc_adress__adress_icon" src="../img/Icons/placeholder.svg">
+            <div class="map_block_desc_adress_col2">
+              <h3 class="map_block_desc_adress__adress_text">АДРЕС</h3>
+              <p class="map_block_desc_adress__adress_desc">ул. Щорса 47а,<br> офис 105</p>
+            </div>
+          </div>
+          <div class="map_block_call_adress"><img class="map_block_call_adress__adress_icon" src="../img/Icons/phone.svg">
+            <div class="map_block_call_adress_col2">
+              <h3 class="map_block_call_adress__adress_text">ЗВОНИТЕ НАМ</h3>
+              <p class="map_block_call_adress__adress_desc">+38 (071) 348 00 95<br>+38 (071) 348 00 96<br>+38 (050) 177 80 65<br>+38 (062) 343 33 77</p>
+            </div>
+          </div>
+          <div class="map_block_email"><img class="map_block_email__adress_icon" src="../img/Icons/message.svg">
+            <div class="map_block_email_col2">
+              <h3 class="map_block_email__adress_text">EMAIL</h3>
+              <p class="map_block_email__adress_desc">reklama@2lion.ru</p>
+            </div>
+          </div>
+        </div>
+        <div class="map_block_map">
+          <div class="map_block_map__yandex_map" id="myMap"></div>
+        </div>
+      </div>
+      <section class="recommendations">
+        <div class="recommendations_row_one">
+          <h2 class="recommendations_row_one__header_text">НАС РЕКОМЕНДУЮТ</h2>
+        </div>
+        <div class="recommendations_row_two">
+          <div class="recommendations_row_two_border"></div>
+          <div class="recommendations_elems"><img class="recommendations_elems__elem_1" src="../img/Assets/partners/1.png"></div>
+          <div class="recommendations_elems"><img class="recommendations_elems__elem_2" src="../img/Assets/partners/2.png"></div>
+          <div class="recommendations_elems"><img class="recommendations_elems__elem_3" src="../img/Assets/partners/3.png"></div>
+          <div class="recommendations_elems"><img class="recommendations_elems__elem_4" src="../img/Assets/partners/4.png"></div>
+          <div class="recommendations_elems"><img class="recommendations_elems__elem_5" src="../img/Assets/partners/5.png"></div>
+          <div class="recommendations_elems"><img class="recommendations_elems__elem_6" src="../img/Assets/partners/6.png"></div>
+          <div class="recommendations_elems"><img class="recommendations_elems__elem_7" src="../img/Assets/partners/7.png"></div>
+          <div class="recommendations_elems"><img class="recommendations_elems__elem_8" src="../img/Assets/partners/8.png"></div>
+          <div class="recommendations_elems"><img class="recommendations_elems__elem_9" src="../img/Assets/partners/9.png"></div>
+          <div class="recommendations_elems"><img class="recommendations_elems__elem_10" src="../img/Assets/partners/10.png"></div>
+        </div>
+      </section>
+    </section>
   </section>
   <section class="footer">
     <div class="socials_block">
@@ -158,4 +250,5 @@
   <script src="../js/slick.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
   <script src="../js/main.js"></script>
+  <script src="../js/for_template.js"></script>
 </body>

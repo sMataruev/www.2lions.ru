@@ -22,30 +22,22 @@ html(lang='ru')
 
 body
 	block content
+
+		include ../parts/windowCall
 		section.template_nav_block
 			.template_nav_block_menu
 				ul.template_nav_block_items
 					li.template_nav_block_item
-						a(href='#main').template_nav_block_item__link_main.template_link--active ГЛАВНАЯ
+						a(href='./index.html').template_nav_block_item__link_main.template_link--active НАЗАД
 					li.template_nav_block_item
-						a(href='#services').template_nav_block_item__link_servives.template_link--active УСЛУГИ
+						a(href='#temp_services').template_nav_block_item__link_servives.template_link--active УСЛУГИ
 					li.template_nav_block_item
-						a(href='#works').template_nav_block_item__link_works.template_link--active РАБОТЫ
+						a(href='#temp_advantage').template_nav_block_item__link_works.template_link--active ПРЕИМУЩЕСТВА
 					li.template_nav_block_item
-						a(href='#aboutUs').template_nav_block_item__link_about_us.template_link--active О НАС
+						a(href='#the_main').template_nav_block_item__link_about_us.template_link--active ГЛАВНОЕ
 			.template_nav_block_contacts
 				.template_nav_block_contacts__phone +38 050 971 99 53
 				button.template_nav_block_contacts__btn СВЯЗАТЬСЯ С НАМИ
-
-
-
-
-
-
-
-
-
-
 
 		section.template_header
 			.template_header_hamburger
@@ -56,13 +48,13 @@ body
 					li.template_header_hamburger_item
 						.template_header_hamburger_item__phone +38 050 971 99 53
 					li.template_header_hamburger_item
-						a(href='#').template_header_hamburger_item__link_main ГЛАВНАЯ
+						a(href='index.html').template_header_hamburger_item__link_main НАЗАД
 					li.template_header_hamburger_item
-						a(href='#').template_header_hamburger_item__link_servives УСЛУГИ
+						a(href='#temp_services').template_header_hamburger_item__link_servives УСЛУГИ
 					li.template_header_hamburger_item
-						a(href='#').template_header_hamburger_item__link_works РАБОТЫ
+						a(href='#temp_advantage').template_header_hamburger_item__link_works ПРЕИМУЩЕСТВА
 					li.template_header_hamburger_item
-						a(href='#').template_header_hamburger_item__link_about_us О НАС
+						a(href='#the_main').template_header_hamburger_item__link_about_us ГЛАВНОЕ
 			header.template_header_block
 				.template_header_block__logo
 				h1.template_header_block__offer_text БРЕНДИНГ
@@ -70,49 +62,72 @@ body
 				p.template_header_block__text
 					| БРЕНДИРОВАНИЕ АВТОМОБИЛЯ
 
+		section.wrapper
+			section(id='temp_services').template_services
+				.template_services_row_one
+					h2.template_services_row_one__header_text НАЗВАНИЕ УСЛУГИ
+				.template_services_row_two
+					.template_services_row_two__border
+					.template_services_row_two_media_content
+						.template_services_row_two_media_content_img
+							img(src='../img/Icons/Services/Auto-Branding.png').template_services_row_two_media_content_img__logo
+						.template_services_row_two_text_content
+							p.template_services_row_two_text_content__content_text_one Брендирование автомобилей – это рекламно-информационноя или эксклюзивное оформление автомобилей высококачественной виниловой пленкой или другими высококачественными материалами
+							p.template_services_row_two_text_content__content_text_one Использование такого вида оформления автотранспортных средств является частью динамичной рекламной компании, которую заметят огромное количество потенциальных покупателей.
+							p.template_services_row_two_text_content__content_text_one Два Льва предлагает создание и оформление легковых и грузовых автомобиля любой сложности.
+							p.template_services_row_two_text_content__content_text_one Брендированные авто заметно выделяются, привлекают к себе внимание, поэтому использование такого вида рекламы значительно увеличивает доход предприятия, а также позволяет сделать бренд узнаваемым
+			section(id='temp_advantage').template_advantages
+				.template_advantages_row_one
+					h2.template_advantages_row_one__header_text ПРЕИМУЩЕСТВА
+				.template_advantages_row_two
+					.template_advantages_row_two__border
+					.template_advantages_row_two_content
+						ul.template_advantages_row_two_content_items
+							li.template_advantages_row_two_content_items__item брендированные автомобили выделяются из обще массы автотранспортных средств
+							li.template_advantages_row_two_content_items__item брендированные автомобили выделяются из обще массы автотранспортных средств
+							li.template_advantages_row_two_content_items__item брендированные автомобили выделяются из обще массы автотранспортных средств
 
+			section(id='the_main').template_the_main
+				.template_the_main_row_one
+					h2.template_the_main_row_one__header_text ГЛАВНОЕ
+				.template_the_main_row_two
+					.template_the_main_row_two__border
+					.template_the_main_row_two_content
+						ul.template_the_main_row_two_content_items
+							li.template_the_main_row_two_content_items__item брендированные автомобили выделяются из обще массы автотранспортных средств
+							li.template_the_main_row_two_content_items__item брендированные автомобили выделяются из обще массы автотранспортных средств
+							li.template_the_main_row_two_content_items__item брендированные автомобили выделяются из обще массы автотранспортных средств
 
-
-
-
-
-
-
-
-
-
-
-
-		section.template_content
-		section.map
-			.map_row
-				.map_block_desc
-					.map_block_desc_adress
-						img(src='../img/Icons/placeholder.svg').map_block_desc_adress__adress_icon
-						.map_block_desc_adress_col2
-							h3.map_block_desc_adress__adress_text АДРЕС
-							p.map_block_desc_adress__adress_desc пр-т Мира 17,
-								br
-								|    8 этаж офис 86
-					.map_block_call_adress
-						img(src='../img/Icons/phone.svg').map_block_call_adress__adress_icon
-						.map_block_call_adress_col2
-							h3.map_block_call_adress__adress_text ЗВОНИТЕ НАМ
-							p.map_block_call_adress__adress_desc
-								| +38 (071) 348 00 95
-								br
-								| +38 (071) 348 00 96
-								br
-								| +38 (050) 177 80 65
-								br
-								| +38 (062) 343 33 77
-					.map_block_email
-						img(src='../img/Icons/message.svg').map_block_email__adress_icon
-						.map_block_email_col2
-							h3.map_block_email__adress_text EMAIL
-							p.map_block_email__adress_desc reklama@2lion.ru
-				.map_block_map
-					.map_block_map__yandex_map(id="myMap")
+			section.map
+				.map_row
+					.map_block_desc
+						.map_block_desc_adress
+							img(src='../img/Icons/placeholder.svg').map_block_desc_adress__adress_icon
+							.map_block_desc_adress_col2
+								h3.map_block_desc_adress__adress_text АДРЕС
+								p.map_block_desc_adress__adress_desc ул. Щорса 47а,
+									br
+									|  офис 105
+						.map_block_call_adress
+							img(src='../img/Icons/phone.svg').map_block_call_adress__adress_icon
+							.map_block_call_adress_col2
+								h3.map_block_call_adress__adress_text ЗВОНИТЕ НАМ
+								p.map_block_call_adress__adress_desc
+									| +38 (071) 348 00 95
+									br
+									| +38 (071) 348 00 96
+									br
+									| +38 (050) 177 80 65
+									br
+									| +38 (062) 343 33 77
+						.map_block_email
+							img(src='../img/Icons/message.svg').map_block_email__adress_icon
+							.map_block_email_col2
+								h3.map_block_email__adress_text EMAIL
+								p.map_block_email__adress_desc reklama@2lion.ru
+					.map_block_map
+						.map_block_map__yandex_map(id="myMap")
+				include ../parts/recommendations
 		section.footer
 			.socials_block
 				.socials_block__line
@@ -204,9 +219,6 @@ body
 
 
 
-
-
-
 	script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js')
 	script(src='https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js')
 	script(src='https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/shortcuts/sticky.min.js')
@@ -217,3 +229,4 @@ body
 	script(src='../js/slick.js')
 	script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
 	script(src='../js/main.js')
+	script(src='../js/for_template.js')

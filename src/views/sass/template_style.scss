@@ -19,6 +19,7 @@ body {
   background-color: #f7f8ff;
 }
 
+
 //layout setups
 @import "layout/setups";
 @import "layout/fonts";
@@ -27,7 +28,7 @@ body {
 
 //mixins
 @import "helpers/mixins";
-
+@import "blocks/windowCall";
 
 
 //**********************************************NAV_BLOCK
@@ -137,8 +138,6 @@ body {
   z-index: 500;
   opacity: 0.8;
 }
-
-
 
 
 
@@ -325,13 +324,378 @@ body {
 }
 
 
+//**********************************************CONTENT_BLOCK
+
+.template_services {
+  width: 100%;
+  height: auto;
+}
+.template_services_row_one{
+  padding-top: 40px;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  height: 100px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 52px;
+
+  &__header_text {
+    color: #897756;
+    font-family: Bebas, sans-serif;
+    font-size: 2.7rem;
+    font-weight: bold;
+    transition: all 200ms ease-in-out;
+    @include tablets{
+      font-size: 2.2rem;
+    }
+    @include phones{
+      font-size: 1.9rem;
+    }
+  }
+  @include tablets{
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+  @include phones{
+   height: 50px;
+  }
+}
+.template_services_row_two{
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+  align-items: center;
+}
+.template_services_row_two__border{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 5px;
+  background: #b29b70; /* Old browsers */
+  background: -moz-linear-gradient(45deg, #b29b70 0%, #ddd7b3 47%, #b29b70 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, #b29b70 0%,#ddd7b3 47%,#b29b70 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, #b29b70 0%,#ddd7b3 47%,#b29b70 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b29b70', endColorstr='#b29b70',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.template_services_row_two_media_content {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 500px;
+  transition: all 200ms ease-in-out;
+  overflow: hidden;
+  @include tablets {
+    width: 100%;
+    flex-direction: column;
+  }
+  @include phones {
+    justify-content: start;
+    min-height: auto;
+  }
+}
+.template_services_row_two_media_content_img {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: #e6e6e6;
+  transition: all 200ms ease-in-out;
+  &__logo {
+    width: 80%;
+    align-self: center;
+
+    @include tablets {
+      width: 40%;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    @include phones{
+      width: 50%;
+    }
+  }
+
+  @include tablets{
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  @include phones {
+    margin-bottom: 0;
+  }
+}
+.template_services_row_two_text_content {
+  width:50%;
+  height: auto;
+  padding: 56px 20px 20px 20px;
+  background-color: #ffffff;
+  //overflow: hidden;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  transition: all 200ms ease-in-out;
+  box-sizing: border-box;
+
+  @include tablets{
+    width: 100%;
+    padding: 20px 10px 20px 10px;
+    flex-direction: column;
+    font-size: 1rem;
+    height: auto;
+  }
+  @include phones {
+    width: 100%;
+    height: auto;
+    overflow: scroll;
+  }
+
+
+
+  &__content_text_one {
+    font-size: 1rem;
+    font-family: CenturyGothic, sans-serif;
+    margin-bottom: 40px;
+    line-height: 1.5rem;
+
+    &:last-child{
+      margin-bottom: 0;
+    }
+    @include tablets{
+      font-size: 1.3rem;
+      line-height: 1.8rem;
+      margin-bottom: 20px;
+      text-align: justify;
+    }
+    @include phones {
+      font-size: 0.9rem;
+      line-height: 1.2rem;
+    }
+
+
+  }
+
+}
+
+
+
+
+.template_advantages{
+
+}
+.template_advantages_row_one{
+ @extend .template_services_row_one;
+}
+.template_advantages_row_one__header_text{
+  @extend .template_services_row_one__header_text;
+}
+.template_advantages_row_two{
+  position: relative;
+}
+.template_advantages_row_two__border{
+@extend  .template_services_row_two__border;
+}
+.template_advantages_row_two_content {
+  width: 100%;
+  //height: 300px;
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+
+
+  @include tablets{
+    padding: 20px;
+  }
+  @include phones{
+    padding: 10px;
+  }
+
+}
+.template_advantages_row_two_content_items {
+  width: 100%;
+  //background-color: #ffe7ef;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  @include tablets{
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  @include phones{
+
+  }
+  &__item {
+    margin-bottom: 30px;
+    font-family: CenturyGothic, sans-serif;
+    font-size: 1.2rem;
+
+    @include tablets{
+      margin-bottom: 10px;
+      line-height: 1.9rem;
+    }
+    @include phones{
+      font-size: 0.9rem;
+    }
+
+    &:before {
+      content: '--';
+      position: relative;
+      left: -6px;
+    }
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+
+
+.template_the_main{
+  margin-bottom: 150px;
+}
+.template_the_main_row_one{
+  @extend .template_services_row_one;
+}
+.template_the_main_row_one__header_text{
+  @extend .template_services_row_one__header_text;
+}
+.template_the_main_row_two{
+  position: relative;
+}
+.template_the_main_row_two__border{
+  @extend  .template_services_row_two__border;
+}
+.template_the_main_row_two_content {
+@extend .template_advantages_row_two_content;
+  background-color: #17b7cd;
+}
+.template_the_main_row_two_content_items {
+  @extend .template_advantages_row_two_content_items;
+
+  &__item {
+    @extend .template_advantages_row_two_content_items__item;
+    color: #fff;
+    &:before {
+      content: '-';
+      position: relative;
+      left: -6px;
+    }
+  }
+}
+
+
+
+
+//************************************************RECOMMENDATIONS
+section.recommendations{
+  //background-color: navajowhite;
+}
+
+.recommendations_row_one {
+  height: 150px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 52px;
+
+  &__header_text {
+    text-transform: uppercase;
+    color: #897756;
+    font-family: Bebas, sans-serif;
+    font-size: 2.7rem;
+    font-weight: bold;
+    transition: all 200ms ease-in-out;
+    @include tablets {
+      font-size: 2.2rem;
+    }
+    @include phones {
+      font-size: 1.9rem;
+    }
+  }
+}
+
+.recommendations_row_two {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+  box-sizing: border-box;
+  padding: 30px 0 30px 0;
+
+
+}
+.recommendations_elems {
+  width: 200px;
+  height: 150px;
+  margin: 15px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 15px 0 #c3c3c3;
+  box-shadow: 0 0 15px 0 #c3c3c3;
+  box-sizing: border-box;
+  transition: all 200ms ease-in-out;
+  padding: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow: hidden;
+  @include tablets {
+    width: 250px;
+  }
+
+}
+.recommendations_elems__elem_1 {
+  width: 100%;
+}
+
+
+.recommendations_elems__elem_2{
+  @extend .recommendations_elems__elem_1;
+}
+.recommendations_elems__elem_3{
+  @extend .recommendations_elems__elem_1;
+}
+.recommendations_elems__elem_4{
+  @extend .recommendations_elems__elem_1;
+}
+.recommendations_elems__elem_5{
+  @extend .recommendations_elems__elem_1;
+}
+.recommendations_elems__elem_6{
+  @extend .recommendations_elems__elem_1;
+}
+.recommendations_elems__elem_7{
+  @extend .recommendations_elems__elem_1;
+}
+.recommendations_elems__elem_8{
+  @extend .recommendations_elems__elem_1;
+}
+.recommendations_elems__elem_9{
+  @extend .recommendations_elems__elem_1;
+}
+.recommendations_elems__elem_10{
+  @extend .recommendations_elems__elem_1;
+}
 
 
 
 
 
 
-
+//**********************************************BURGER_BLOCK
 //Бургер кнопка
 $t: 0.2s;
 $delay: 0.05s;

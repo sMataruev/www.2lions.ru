@@ -1,0 +1,104 @@
+section.recommendations{
+  //background-color: #ffffff;
+}
+
+
+.recommendations_row_one {
+  height: 150px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 52px;
+
+  &__header_text {
+    text-transform: uppercase;
+    color: #897756;
+    font-family: Bebas, sans-serif;
+    font-size: 2.7rem;
+    font-weight: bold;
+    transition: all 200ms ease-in-out;
+    @include tablets {
+      font-size: 2.2rem;
+    }
+    @include phones {
+      font-size: 1.9rem;
+    }
+  }
+}
+
+.recommendations_row_two {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+  box-sizing: border-box;
+  padding: 50px 0 50px 0;
+  position: relative;
+}
+.recommendations_row_two_border {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 5px;
+  background: #b29b70; /* Old browsers */
+  background: -moz-linear-gradient(45deg, #b29b70 0%, #ddd7b3 47%, #b29b70 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, #b29b70 0%,#ddd7b3 47%,#b29b70 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, #b29b70 0%,#ddd7b3 47%,#b29b70 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b29b70', endColorstr='#b29b70',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.recommendations_elems {
+  width: 200px;
+  height: 150px;
+  margin: 15px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 15px 0 #c3c3c3;
+  box-shadow: 0 0 15px 0 #c3c3c3;
+  box-sizing: border-box;
+  transition: all 200ms ease-in-out;
+  padding: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow: hidden;
+  @include tablets {
+    width: 250px;
+  }
+
+}
+.recommendations_elems__elem_1 {
+  width: 100%;
+}
+
+.recommendations_elems__elem_2{
+  @extend .recommendations_elems__elem_1;
+}
+.recommendations_elems__elem_3{
+  @extend .recommendations_elems__elem_1;
+}
+.recommendations_elems__elem_4{
+  @extend .recommendations_elems__elem_1;
+}
+.recommendations_elems__elem_5{
+  @extend .recommendations_elems__elem_1;
+}
+.recommendations_elems__elem_6{
+  @extend .recommendations_elems__elem_1;
+}
+.recommendations_elems__elem_7{
+  @extend .recommendations_elems__elem_1;
+}
+.recommendations_elems__elem_8{
+  @extend .recommendations_elems__elem_1;
+}
+.recommendations_elems__elem_9{
+  @extend .recommendations_elems__elem_1;
+}
+.recommendations_elems__elem_10{
+  @extend .recommendations_elems__elem_1;
+}
+
+
+

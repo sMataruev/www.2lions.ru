@@ -122,7 +122,7 @@ gulp.task('serve', ['watch'], () => {
             baseDir: "./dist",
         },
         directory: true,
-        startPath: "html/index.html"
+        startPath: "html/template_page.html"
     });
     // gulp.watch([scssPath], ['sass']);
     gulp.watch("dist/**/*.*").on('change', browser.reload);
@@ -155,7 +155,7 @@ gulp.task('scss', () => {
         	rootSize  :    16
         }))
         // .pipe(CSSO())
-        .pipe(concat('styles.css'))
+        .pipe(concat('template_style.css'))
         .pipe(sourcemaps.write())
         // .pipe(cssnano())
         // .pipe(csso())
